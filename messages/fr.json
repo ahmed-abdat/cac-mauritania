@@ -44,7 +44,27 @@
     "Entrepreneurship": "Entrepreneuriat",
     "Conference": "Conférence",
     "Charity": "Charité",
-    "Ready Build": "Construction prête"
+    "Ready Build": "Construction prête",
+    "navigationGroups": {
+      "construction": {
+        "title": "Construction",
+        "description": "Services de construction avancés"
+      },
+      "sustainability": {
+        "title": "Durabilité",
+        "description": "Solutions durables et agriculture"
+      },
+      "business": {
+        "title": "Affaires",
+        "description": "Support aux entreprises et entrepreneuriat"
+      }
+    },
+    "learnMore": "En savoir plus",
+    "openMenu": "Ouvrir le menu",
+    "cacSubtitle": "Centre d'Entrepreneuriat",
+    "quickLinks": "Liens rapides",
+    "contactUs": "Contactez-nous",
+    "phone": "Tél: 00222-42022255"
   },
   "/ready-construction": {
     "title": "Galerie de construction prête"
@@ -70,15 +90,6 @@
   "/charitable-interventions": {
     "title": "Galerie des interventions caritatives"
   },
-  "/prefabricated-building": {
-    "title": "Galerie de médias: Bâtiment préfabriqué"
-  },
-  "/fiber-cement": {
-    "title": "Galerie de médias: Ciment fibre"
-  },
-  "/sandwich-panel": {
-    "title": "Galerie de médias: Panneau sandwich"
-  },
   "/solar-energy": {
     "title": "Galerie de médias: Énergie solaire"
   },
@@ -87,21 +98,6 @@
   },
   "/agriculture": {
     "title": "Galerie de médias: Agriculture"
-  },
-  "/water-electricity": {
-    "title": "Galerie de médias: Eau et électricité"
-  },
-  "/logistics": {
-    "title": "Galerie de médias: Logistique"
-  },
-  "/veterinary": {
-    "title": "Galerie de médias: Élevage"
-  },
-  "/follow-up-study": {
-    "title": "Galerie de médias: Étude de suivi"
-  },
-  "/elevator": {
-    "title": "Galerie de médias: Ascenseur"
   },
   "Products": {
     "sectionTitle": "Nos Produits Vedettes",

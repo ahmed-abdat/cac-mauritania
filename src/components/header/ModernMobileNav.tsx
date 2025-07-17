@@ -78,16 +78,7 @@ export function ModernMobileNav({ locale }: ModernMobileNavProps) {
   const closeSheet = () => setIsOpen(false);
 
   const getGroupTitle = (groupId: string) => {
-    switch (groupId) {
-      case "construction":
-        return isRTL ? "البناء والإنشاء" : locale === "fr" ? "Construction" : "Construction";
-      case "sustainability":
-        return isRTL ? "الاستدامة" : locale === "fr" ? "Durabilité" : "Sustainability";
-      case "business":
-        return isRTL ? "الأعمال" : locale === "fr" ? "Affaires" : "Business";
-      default:
-        return "";
-    }
+    return t(`navigationGroups.${groupId}.title`);
   };
 
   const renderMobileGroup = (group: typeof navigationGroups[0]) => {
@@ -141,7 +132,7 @@ export function ModernMobileNav({ locale }: ModernMobileNavProps) {
         >
           <Menu className="w-5 h-5" />
           <span className="sr-only">
-            {isRTL ? "فتح القائمة" : locale === "fr" ? "Ouvrir le menu" : "Open menu"}
+            {t("openMenu")}
           </span>
         </Button>
       </SheetTrigger>
@@ -168,7 +159,7 @@ export function ModernMobileNav({ locale }: ModernMobileNavProps) {
               <div className="flex flex-col">
                 <span className="text-base font-bold text-gray-900">CAC</span>
                 <span className="text-xs text-gray-600">
-                  {isRTL ? "مركز الريادة والاستشارات" : locale === "fr" ? "Centre d'Entrepreneuriat" : "Entrepreneurship Center"}
+                  {t("cacSubtitle")}
                 </span>
               </div>
             </Link>
@@ -203,7 +194,7 @@ export function ModernMobileNav({ locale }: ModernMobileNavProps) {
           {/* Quick Links */}
           <div className="space-y-4">
             <h3 className="text-sm font-medium text-primary-blue px-2">
-              {isRTL ? "روابط سريعة" : locale === "fr" ? "Liens rapides" : "Quick Links"}
+              {t("quickLinks")}
             </h3>
             <nav className="space-y-2">
               <Link
@@ -227,13 +218,13 @@ export function ModernMobileNav({ locale }: ModernMobileNavProps) {
           >
             <Link href={`/${locale}/contact`} onClick={closeSheet}>
               <MessageSquare className="w-4 h-4 mr-2" />
-              {isRTL ? "تواصل معنا" : locale === "fr" ? "Contactez-nous" : "Contact Us"}
+              {t("contactUs")}
             </Link>
           </Button>
           
           <div className="text-center">
             <p className="text-xs text-gray-600">
-              {isRTL ? "هاتف: 00222-42022255" : locale === "fr" ? "Tél: 00222-42022255" : "Phone: 00222-42022255"}
+              {t("phone")}
             </p>
           </div>
         </div>

@@ -44,7 +44,27 @@
     "Entrepreneurship": "Entrepreneurship",
     "Conference": "Conference",
     "Charity": "Charity",
-    "Ready Build": "Ready Build"
+    "Ready Build": "Ready Build",
+    "navigationGroups": {
+      "construction": {
+        "title": "Construction",
+        "description": "Advanced construction services"
+      },
+      "sustainability": {
+        "title": "Sustainability",
+        "description": "Sustainable energy and agriculture solutions"
+      },
+      "business": {
+        "title": "Business",
+        "description": "Business support and entrepreneurship"
+      }
+    },
+    "learnMore": "Learn More",
+    "openMenu": "Open menu",
+    "cacSubtitle": "Entrepreneurship Center",
+    "quickLinks": "Quick Links",
+    "contactUs": "Contact Us",
+    "phone": "Phone: 00222-42022255"
   },
   "/ready-construction": {
     "title": "Ready Construction Gallery"
@@ -70,15 +90,6 @@
   "/charitable-interventions": {
     "title": "Charitable Interventions Gallery"
   },
-  "/prefabricated-building": {
-    "title": "Media Gallery: Prefabricated Building"
-  },
-  "/fiber-cement": {
-    "title": "Media Gallery: Fiber Cement"
-  },
-  "/sandwich-panel": {
-    "title": "Media Gallery: Sandwich Panel"
-  },
   "/solar-energy": {
     "title": "Media Gallery: Solar Energy"
   },
@@ -87,21 +98,6 @@
   },
   "/agriculture": {
     "title": "Media Gallery: Agriculture"
-  },
-  "/water-electricity": {
-    "title": "Media Gallery: Water and Electricity"
-  },
-  "/logistics": {
-    "title": "Media Gallery: Logistics"
-  },
-  "/veterinary": {
-    "title": "Media Gallery: Livestock"
-  },
-  "/follow-up-study": {
-    "title": "Media Gallery: Follow-up Study"
-  },
-  "/elevator": {
-    "title": "Media Gallery: Elevator"
   },
   "Products": {
     "sectionTitle": "Our Featured Products",
@@ -166,41 +162,6 @@
   "agriculture": {
     "title": "Agriculture",
     "description": "CAC provides specialized agricultural consulting and advanced economic solutions, including feed farm development, modern irrigation systems, and drip irrigation systems. We offer consulting on innovative agricultural systems including modern cultivation and maturation processes that provide economical and high-quality food production solutions.",
-    "CTA": "See more media"
-  },
-  "water-electricity": {
-    "title": "Water and Electricity",
-    "description": "MBI company also operates in the field of electricity supply, whether through poles or underground cables. It builds technical rooms containing conversion and distribution units, installs them, and provides them along with cables and all associated electrical equipment. Regarding the water field, it carries out drilling for drinking water and builds water reservoirs of all types, in iron, cement, and plastic.",
-    "CTA": "See more media"
-  },
-  "logistics": {
-    "title": "Logistics",
-    "description": "The MBI group has special equipment for topography in logistics, total stations and GPS, as well as heavy and light vehicles, such as 4x4s, bulldozers, tractors, trucks, cranes, and water drilling units.",
-    "CTA": "See more media"
-  },
-  "sandwich-panel": {
-    "title": "Sandwich Panel",
-    "description": "MBI company offers all industrial designs of sandwich panels that it has been importing from Turkey for over ten years. They are distinguished by their rust-proof galvanized metal structure and dense thermal insulation in polystyrene and polyurethane, as well as the strength of their coating from 0.30 to 0.50. Available in different dimensions to meet various needs, they have been used in many projects in Mauritania. This material offers all units: warehouses, factories, houses, workshops, offices, agencies, mobile rooms, clinics, guard posts, bleachers, cafes, and even floors. All this and more, according to the client's needs. Many projects have been carried out in Mauritania.",
-    "CTA": "See more media"
-  },
-  "veterinary": {
-    "title": "Livestock",
-    "description": "In 2015, the MBI group established a model farm of Holstein cows imported from Germany in the Trarza region, giving impressive results. It therefore specializes in the construction of farms, factories, and milking rooms, as well as in the import of cows and sheep from regions renowned worldwide.",
-    "CTA": "See more media"
-  },
-  "fiber-cement": {
-    "title": "Fiber Cement",
-    "description": "Fiber-cement is a composite building material, made of cement and fibers. Primarily mineral, it imitates wood. Solid and versatile, it is suitable for various applications. Composed of cellulose, sand, and cement, it forms light and robust boards. Fiber-cement is durable and resistant. Walls are built on a metal base, associated with rock wool, an effective thermal and acoustic insulator. Suitable for all uses: internal partitions, facade cladding. Compatible with all types of paint and architecture, with a durability of over 30 years.",
-    "CTA": "See more media"
-  },
-  "elevator": {
-    "title": "Elevator",
-    "description": "MBI Company is a company specializing in services concerning elevators for tall buildings. It provides elevators and associated services, installation, maintenance, and other services. It provides quality services in this field. It is present in Nouakchott and Nouadhibou and is known for its quality services. It has been present in these two cities for several years where it provides quality installation, maintenance, and other associated services in this field. \nInstallation: panoramic elevator \nInstallation with a metal structure \nInstallation with concrete blocks.",
-    "CTA": "See more media"
-  },
-  "follow-up-study": {
-    "title": "Follow-up Study",
-    "description": "The MBI group operates in the fields of study, monitoring, and planning, with a specialized team and has the necessary logistical equipment such as:\n-Total station\n-Differential GPS\n-Levels\n-DRONE (topographic survey)\n-Road project construction\n-Vehicles, cars, trucks, bulldozers, and excavators.",
     "CTA": "See more media"
   },
   "AboutUs": {
@@ -344,9 +305,7 @@
     "email": "E-mail",
     "services": "Our Services",
     "Prefabricated Building": "Prefabricated Building",
-    "waterElectricity": "Water and Electricity",
     "Solar Energy": "Solar Energy",
-    "logistics": "Logistics",
     "switchLanguage": "Switch Language",
     "viewOnMap": "View on Google Maps",
     "allRightsReserved": "All rights reserved."

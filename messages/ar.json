@@ -44,7 +44,27 @@
     "Entrepreneurship": "مركز الريادة",
     "Conference": "قاعة المؤتمرات",
     "Charity": "التدخلات الخيرية",
-    "Ready Build": "البناء الجاهز"
+    "Ready Build": "البناء الجاهز",
+    "navigationGroups": {
+      "construction": {
+        "title": "البناء والإنشاء",
+        "description": "خدمات البناء والإنشاءات المتطورة"
+      },
+      "sustainability": {
+        "title": "الاستدامة",
+        "description": "حلول الطاقة المستدامة والزراعة"
+      },
+      "business": {
+        "title": "الأعمال",
+        "description": "دعم الأعمال والريادة"
+      }
+    },
+    "learnMore": "المزيد",
+    "openMenu": "فتح القائمة",
+    "cacSubtitle": "مركز الريادة والاستشارات",
+    "quickLinks": "روابط سريعة",
+    "contactUs": "تواصل معنا",
+    "phone": "هاتف: 00222-42022255"
   },
   "/ready-construction": {
     "title": "معرض البناء الجاهز"
@@ -54,9 +74,6 @@
   },
   "/renewable-energy": {
     "title": "معرض الطاقة المتجددة"
-  },
-  "/agriculture": {
-    "title": "معرض الزراعة"
   },
   "/animal-development": {
     "title": "معرض التنمية الحيوانية"
@@ -70,15 +87,6 @@
   "/charitable-interventions": {
     "title": "معرض التدخلات الخيرية"
   },
-  "/prefabricated-building": {
-    "title": "معرض الوسائط: المباني الجاهزة"
-  },
-  "/fiber-cement": {
-    "title": "معرض الوسائط: الألياف الاسمنتية"
-  },
-  "/sandwich-panel": {
-    "title": "معرض الوسائط: الألواح المعزولة"
-  },
   "/solar-energy": {
     "title": "معرض الوسائط: الطاقة الشمسية"
   },
@@ -87,21 +95,6 @@
   },
   "/agriculture": {
     "title": "معرض الوسائط: الزراعة"
-  },
-  "/water-electricity": {
-    "title": "معرض الوسائط: المياه والكهرباء"
-  },
-  "/logistics": {
-    "title": "معرض الوسائط: الخدمات اللوجستية"
-  },
-  "/veterinary": {
-    "title": "معرض الوسائط: الثروة الحيوانية"
-  },
-  "/follow-up-study": {
-    "title": "معرض الوسائط: دراسة المتابعة"
-  },
-  "/elevator": {
-    "title": "معرض الوسائط: المصاعد"
   },
   "Products": {
     "sectionTitle": "أفضل منتجاتنا - احصل عليها الآن!",

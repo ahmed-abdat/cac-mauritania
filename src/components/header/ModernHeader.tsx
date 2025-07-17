@@ -119,7 +119,7 @@ export function ModernHeader({ locale }: ModernHeaderProps) {
                   href={`/${locale}/about`}
                   className="inline-flex items-center px-4 py-2 bg-primary-blue hover:bg-primary-lightBlue text-white text-sm font-medium rounded-md shadow-md hover:shadow-lg transition-all duration-200"
                 >
-                  {isRTL ? "المزيد" : locale === "fr" ? "En savoir plus" : "Learn More"}
+                  {t("learnMore")}
                 </Link>
               </div>
             </div>
@@ -217,7 +217,7 @@ export function ModernHeader({ locale }: ModernHeaderProps) {
             pathname === `/${locale}/contact` && "text-primary-blue"
           )}>
             <Headphones className="w-4 h-4" />
-            {isRTL ? "تواصل معنا" : locale === "fr" ? "Contact" : "Contact"}
+            {t("Contact")}
           </div>
         </StarBorder>
       </div>
