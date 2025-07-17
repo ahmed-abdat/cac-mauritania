@@ -1,0 +1,412 @@
+{
+  "IndexPage": {
+    "title": "CAC - Centre d'entrepreneuriat et de conseil",
+    "description": "CAC est un centre de conseil leader spécialisé dans l'entrepreneuriat, la construction, les énergies renouvelables et le développement des affaires en Mauritanie.",
+    "CTA": "En savoir plus",
+    "trustedCompaniesHeading": "ILS NOUS FONT CONFIANCE"
+  },
+  "Features": {
+    "sectionTitle": "Nos Services Distingués",
+    "sectionDescription": "Découvrez notre gamme complète de services de conseil professionnels, conçue pour répondre à tous vos besoins commerciaux.",
+    "feature1Title": "Conseil en entrepreneuriat",
+    "feature1Description": "Nous fournissons des services complets de développement des affaires et de conseil en entrepreneuriat.",
+    "feature2Title": "Services de construction",
+    "feature2Description": "Conseil professionnel en construction pour les projets de construction prêts à l'emploi et traditionnels.",
+    "feature3Title": "Énergies renouvelables",
+    "feature3Description": "Solutions d'énergie renouvelable innovantes et conseil pour le développement durable.",
+    "feature4Title": "Développement des affaires",
+    "feature4Description": "Services complets de développement des affaires avec conseil spécialisé et planification stratégique."
+  },
+  "NotFound": {
+    "title": "404 - Page non trouvée",
+    "description": "Désolé, la page que vous recherchez n'existe pas.",
+    "goBack": "Retour à la page d'accueil"
+  },
+  "Accessibility": {
+    "homeLink": "Retourner à la page d'accueil de CAC",
+    "homeTitle": "Page d'accueil CAC",
+    "aboutLink": "En savoir plus sur nous",
+    "aboutTitle": "À propos de CAC",
+    "contactLink": "Contacter CAC",
+    "contactTitle": "Entrez en contact avec notre équipe",
+    "callLink": "Appeler le support client CAC",
+    "callTitle": "Appeler notre support client",
+    "learnMorePrefix": "En savoir plus sur"
+  },
+  "Navigation": {
+    "Home": "Accueil",
+    "Construction": "Construction",
+    "Agriculture": "Agriculture",
+    "About": "À propos",
+    "Contact": "Contact",
+    "Energy": "Énergie",
+    "Livestock": "Élevage",
+    "Entrepreneurship": "Entrepreneuriat",
+    "Conference": "Conférence",
+    "Charity": "Charité",
+    "Ready Build": "Construction prête"
+  },
+  "/ready-construction": {
+    "title": "Galerie de construction prête"
+  },
+  "/regular-construction": {
+    "title": "Galerie de construction régulière"
+  },
+  "/renewable-energy": {
+    "title": "Galerie d'énergies renouvelables"
+  },
+  "/agriculture": {
+    "title": "Galerie d'agriculture"
+  },
+  "/animal-development": {
+    "title": "Galerie de développement animal"
+  },
+  "/entrepreneurship-center": {
+    "title": "Galerie du centre d'entrepreneuriat"
+  },
+  "/conference-hall": {
+    "title": "Galerie de la salle de conférence"
+  },
+  "/charitable-interventions": {
+    "title": "Galerie des interventions caritatives"
+  },
+  "/prefabricated-building": {
+    "title": "Galerie de médias: Bâtiment préfabriqué"
+  },
+  "/fiber-cement": {
+    "title": "Galerie de médias: Ciment fibre"
+  },
+  "/sandwich-panel": {
+    "title": "Galerie de médias: Panneau sandwich"
+  },
+  "/solar-energy": {
+    "title": "Galerie de médias: Énergie solaire"
+  },
+  "/health": {
+    "title": "Galerie de médias: Matériel santé+sècuritè et meuble"
+  },
+  "/agriculture": {
+    "title": "Galerie de médias: Agriculture"
+  },
+  "/water-electricity": {
+    "title": "Galerie de médias: Eau et électricité"
+  },
+  "/logistics": {
+    "title": "Galerie de médias: Logistique"
+  },
+  "/veterinary": {
+    "title": "Galerie de médias: Élevage"
+  },
+  "/follow-up-study": {
+    "title": "Galerie de médias: Étude de suivi"
+  },
+  "/elevator": {
+    "title": "Galerie de médias: Ascenseur"
+  },
+  "Products": {
+    "sectionTitle": "Nos Produits Vedettes",
+    "sectionDescription": "Découvrez notre sélection soigneusement choisie de produits premium, conçus pour répondre à vos besoins avec qualité et style.",
+    "viewAll": "Voir Tous les Produits",
+    "discover": "Découvrir",
+    "area": "Superficie",
+    "price": "Prix"
+  },
+  "ready-construction": {
+    "title": "Construction Préfabriquée",
+    "description": "CAC fournit des services de conseil spécialisés en construction préfabriquée, y compris la conception, la planification et la mise en œuvre de bâtiments préfabriqués et de solutions de construction rapide.",
+    "CTA": "Voir Plus de Médias"
+  },
+  "regular-construction": {
+    "title": "Construction Traditionnelle",
+    "description": "CAC offre des conseils complets en construction traditionnelle et moderne, y compris la conception architecturale, la gestion de projets de construction et la supervision d'exécution.",
+    "CTA": "Voir Plus de Médias"
+  },
+  "renewable-energy": {
+    "title": "Énergie Renouvelable",
+    "description": "CAC se spécialise dans la fourniture de conseils complets en énergie renouvelable et de solutions solaires innovantes. Nous offrons des conseils spécialisés dans les systèmes d'énergie solaire et les solutions d'énergie durable.",
+    "CTA": "Voir Plus de Médias"
+  },
+  "agriculture": {
+    "title": "Agriculture",
+    "description": "CAC fournit des conseils agricoles spécialisés et des solutions économiques avancées, y compris le développement de fermes d'aliments, les systèmes d'irrigation modernes et les systèmes d'irrigation au goutte-à-goutte.",
+    "CTA": "Voir Plus de Médias"
+  },
+  "animal-development": {
+    "title": "Développement Animal",
+    "description": "CAC fournit des conseils spécialisés en développement animal, y compris le développement de projets d'élevage et les systèmes de soins de santé vétérinaires.",
+    "CTA": "Voir Plus de Médias"
+  },
+  "entrepreneurship-center": {
+    "title": "Centre d'Entrepreneuriat",
+    "description": "CAC fournit des programmes de formation spécialisés et des ateliers en entrepreneuriat et innovation, visant à soutenir les entrepreneurs et développer des projets de startup.",
+    "CTA": "Voir Plus de Médias"
+  },
+  "conference-hall": {
+    "title": "Salle de Conférence",
+    "description": "CAC fournit des services de location et de gestion de salles de conférence, avec tous les équipements et services requis pour organiser des conférences et séminaires.",
+    "CTA": "Voir Plus de Médias"
+  },
+  "charitable-interventions": {
+    "title": "Interventions Caritatives",
+    "description": "CAC organise et met en œuvre divers programmes et interventions caritatives, y compris l'assistance humanitaire et les projets de développement communautaire.",
+    "CTA": "Voir Plus de Médias"
+  },
+  "product": {
+    "buyNow": "Acheter Maintenant",
+    "similarProducts": "Produits que vous pourriez aimer",
+    "price": "Prix",
+    "discover": "Découvrir",
+    "whatsappMessage": "Je dois acheter ce produit : "
+  },
+  "solar-energy": {
+    "title": "Énergie solaire",
+    "description": "CAC se spécialise dans le conseil en énergies renouvelables avec des solutions d'énergie solaire complètes incluant des systèmes hybrides, des systèmes continus 24h/24, et des systèmes d'énergie quotidienne alimentés par la lumière du soleil. Nous proposons des consultations spécialisées pour optimiser la performance, la durée de vie des batteries et les capacités de stockage, offrant les solutions les plus puissantes et économiques pour vos besoins énergétiques.",
+    "CTA": "Voir plus de médias"
+  },
+  "agriculture": {
+    "title": "Agriculture",
+    "description": "CAC fournit des services de conseil agricole spécialisés et des solutions avancées et économiques, telles que le développement de fermes de fourrage, les systèmes d'irrigation modernes, et les systèmes d'irrigation goutte à goutte. Nous offrons des consultations spécialisées pour les fermes de légumes et de fruits, les nouvelles techniques de maturation des dattes et des bananes, et des solutions innovantes dans le domaine du fourrage comme la culture hydroponique de l'orge, à faible coût et offrant des résultats rapides.",
+    "CTA": "Voir plus de médias"
+  },
+  "water-electricity": {
+    "title": "Eau et électricité",
+    "description": "CAC fournit des services de conseil spécialisés dans les domaines de l'eau et de l'électricité, incluant la planification des systèmes électriques, la conception des salles techniques, les conseils pour les systèmes de distribution, et le développement de projets d'eau et de réservoirs de stockage de tous types.",
+    "CTA": "Voir plus de médias"
+  },
+  "logistics": {
+    "title": "Logistique",
+    "description": "CAC offre des services de conseil logistique spécialisés, incluant les conseils en topographie, la planification de projets, la gestion d'équipements, et des solutions de transport et de services logistiques intégrés.",
+    "CTA": "Voir plus de médias"
+  },
+  "sandwich-panel": {
+    "title": "Panneau sandwich",
+    "description": "La société MBI propose toutes les conceptions industrielles des panneaux sandwich qu'elle importe de Turquie depuis plus de dix ans. Ils se distinguent par leur structure métallique galvanisée antirouille et leur isolation thermique dense en polystyrène et en polyuréthane, ainsi que par la force de leur revêtement de 0,30 à 0,50. Disponibles dans différentes dimensions pour répondre à divers besoins, ils ont été utilisés dans de nombreux projets en Mauritanie. Cette matière offre toutes les unités : entrepôts, usines, maisons, ateliers, bureaux, agences, salles mobiles, cliniques, postes de garde, gradins, cafés, et même étages. Tout cela et plus encore, selon les besoins du client. De nombreux projets ont été réalisés en Mauritanie.",
+    "CTA": "Voir plus de médias"
+  },
+  "veterinary": {
+    "title": "Élevage",
+    "description": "En 2015, le groupe MBI a établi une ferme modèle de vaches Holstein importées d'Allemagne dans la région de Trarza, donnant des résultats impressionnants. Il se spécialise donc dans la construction de fermes, d'usines et de salles de traite, ainsi que dans l'importation de vaches et de moutons provenant de régions renommées à l'échelle mondiale.",
+    "CTA": "Voir plus de médias"
+  },
+  "fiber-cement": {
+    "title": "Ciment fibre",
+    "description": "Le Ciment-fibre est un matériau de construction composite, composé de ciment et de fibres. Principalement minéral, il imite le bois. Solide et polyvalent, il convient à diverses applications. Constitué de cellulose, de sable et de ciment, il forme des planches légères et robustes. Le Ciment-fibre est durable et résistant. Les murs sont construits sur un socle métallique, associé à de la laine de roche, un isolant thermique et acoustique efficace. Adapté à toutes les utilisations : cloisons internes, revêtement de façades. Compatible avec tout type de peinture et d'architecture, avec une durabilité de plus de 30 ans.",
+    "CTA": "Voir plus de médias"
+  },
+  "elevator": {
+    "title": "Ascenseur",
+    "description": "La Société MBI est une société spécialisée dans les services concernant les ascenseurs des bâtiments de hauteur. Elle fournit les ascenseurs et les services associés, l'installation, la maintenance et les autres services. Elle fournit des services de qualité dans ce domaine. Elle est présente à Nouakchott et Nouadhibou et est connue pour ses services de qualité. Elle est présente dans ces deux villes depuis plusieurs années où elle fournit des services de qualité d'installation, de maintenance et autres services associés dans ce domaine. \nInstallation : ascenseur panoramique \nInstallation avec une structure métallique \nInstallation avec des blocs en béton.",
+    "CTA": "Voir plus de médias"
+  },
+  "follow-up-study": {
+    "title": "Étude de Suivi",
+    "description": "Le groupe MBI opère dans les domaines de l'étude, du suivi et de la planification, avec une équipe spécialisée et dispose des équipements logistiques nécessaires tels que :\n-Station totale\n-GPS différentiel\n-Niveaux\n-DRONE (levé topographique)\n-Construction de projet de route\n-Véhicules, voitures, camions, bulldozers et excavatrices.",
+    "CTA": "Voir plus de médias"
+  },
+  "AboutUs": {
+    "PresentationduGroupeCAC": "Présentation du Centre CAC",
+    "CenterforEntrepreneurship": "CAC - Centre d'entrepreneuriat et de conseil est un centre de conseil leader spécialisé dans la construction, les énergies renouvelables, l'agriculture et les services de développement des affaires.",
+    "ExperienceDescription": "CAC possède une vaste expérience dans le conseil et le développement des affaires, ayant travaillé avec les secteurs privé et public sur divers projets incluant le conseil en construction, les solutions d'énergies renouvelables, le développement agricole et le soutien à l'entrepreneuriat. Voici quelques-uns de nos domaines de service :",
+    "ProjetsExemples": "Exemples de Projets",
+    "Projet1": "Construction de centres miniers en Mauritanie, Somelec, Radio Mauritanie, l'Administration des Transports Terrestres, la Gendarmerie Nationale, la Sécurité Routière, les Transports Publics, le Port de Tanit, l'Organisation Sweed, la Banque Populaire de Mauritanie, TAAZOUR, la Société de Commercialisation du Poisson, Sogeco, le Ministère de l'assainissement, le Ministère de la Santé et la sécurité nationale, la société de radiodiffusion et de télévision TDM et la société minière KENZ.",
+    "Projet2": "Quant au secteur privé, nous avons implanté des usines d'eau et de plastique et construit un grand nombre d'entrepôts, de halls, d'habitations et de locaux mobiles.",
+    "Projet3": "CAC se spécialise dans le conseil en énergies renouvelables avec des solutions d'énergie solaire complètes incluant des systèmes continus 24h/24, une alimentation de secours hybride, et une énergie quotidienne alimentée par la lumière du soleil. Nous avons mis en œuvre plusieurs projets réussis dans ce domaine.",
+    "SecteurPrive": "Secteur Privé",
+    "EnergieSolaire": "Énergie Solaire",
+    "Energie24h": "(24h/24) en continu",
+    "EnergieHybride": "Alimentation de secours (hybride)",
+    "EnergieQuotidienne": "Énergie quotidienne alimentée par la lumière du soleil",
+    "ProjetsEnergie": "Elle a également plusieurs projets mis en œuvre dans ce domaine.",
+    "EtudesSuiviPlanification": "Études, Suivi et Planification",
+    "EtudesDescription": "CAC fournit des services de conseil dans les études de projets, le suivi et la planification avec du personnel spécialisé et des équipements logistiques incluant :",
+    "StationTotal": "Station total",
+    "GPSDifferentiel": "GPS différentiel",
+    "Niveaux": "Niveaux",
+    "DRONE": "DRONE (topographie du levier)",
+    "Vehicules": "Et les véhicules, voitures, camions et tracteurs aussi.",
+    "ElevageAgriculture": "Élevage et Agriculture",
+    "CACAGRO": "CAC se spécialise dans les services de conseil agricole et de développement de l'élevage.",
+    "CACAGRODescription": "CAC a mis en œuvre plusieurs projets de conseil agricole réussis, livrant des résultats tangibles dans diverses régions depuis 2015. Nous fournissons des conseils sur des systèmes agricoles innovants incluant des processus modernes de culture et de maturation qui offrent des solutions de production alimentaire économiques et de haute qualité.",
+    "CACMedical": "Conseil en Santé",
+    "CACMedicalDescription": "CAC fournit des services de conseil en santé et des solutions pour les installations de santé intégrées incluant :",
+    "UnitesUrgents": "Unités pour les cas urgents",
+    "UnitesMaternite": "Unités de maternité",
+    "UnitesIntegrees": "Unités de santé intégrées",
+    "UnitesVaccination": "Unités de vaccination",
+    "UnitesSang": "Unités de prise de sang",
+    "CliniqueDentaire": "Et une clinique dentaire mobile",
+    "AppareilsExamen": "Il fournit également tous les appareils d'examen :",
+    "Radio": "Radio",
+    "ECG": "ECG",
+    "ECO": "ÉCO",
+    "MaterielLaboratoire": "Matériel de laboratoire",
+    "LitsFauteuils": "Tous types de lits et fauteuils roulants",
+    "CACSecurite": "Conseil en Sécurité",
+    "CACSecuriteDescription": "CAC fournit des services de conseil en sécurité incluant les évaluations de sécurité sur le lieu de travail, les recommandations d'équipements de sécurité, et le développement de protocoles de sécurité pour diverses industries.",
+    "CACOffice": "Conseil en Bureaux",
+    "CACOfficeDescription": "CAC fournit des services de conseil complets pour les bureaux incluant la conception d'espaces de travail, l'optimisation de l'aménagement, la planification des salles de réunion, et les recommandations d'équipements de bureau. Nous offrons des conseils professionnels pour des environnements de bureau modernes qui améliorent la productivité et l'efficacité."
+  },
+  "marketplace": {
+    "sectionTitle": "Nos Produits",
+    "viewAll": "Voir Tout",
+    "discover": "Découvrir",
+    "price": "Prix",
+    "categoryLabel": "Catégories",
+    "sante": "Produits de Santé",
+    "security": "Produits de Sécurité",
+    "biroutice": "Produits de Fournitures de Bureau",
+    "home": "Accueil"
+  },
+  "health": {
+    "sectionTitle": "Matériel santé+sècuritè et meuble",
+    "home": "Accueil",
+    "viewAll": "Voir Tout",
+    "discover": "Découvrir",
+    "price": "Prix",
+    "contactUs": "Contactez-nous",
+    "description": "Description",
+    "specification": "Spécifications",
+    "addToCart": "Ajouter au panier",
+    "similarProducts": "Produits similaires",
+    "inStock": "En stock",
+    "outOfStock": "Rupture de stock",
+    "breadcrumb": "Navigation",
+    "searchPlaceholder": "Rechercher des produits"
+  },
+  "contactForm": {
+    "title": "Contactez-nous",
+    "firstName": "Prénom",
+    "lastName": "Nom de famille",
+    "companyName": "Nom de l'entreprise",
+    "email": "Email",
+    "phoneNumber": "Numéro de téléphone",
+    "message": "Message",
+    "submit": "Envoyer",
+    "getInTouch": "Contactez-nous",
+    "visitUs": "Venez nous voir",
+    "visitDescription": "Notre emplacement est Cité smart-tevragh zeina",
+    "chatToUs": "Parlez-nous",
+    "chatDescription": "Notre équipe sympathique est là pour vous aider.\ninfo@cac-mauritania.com",
+    "callUs": "Appelez-nous",
+    "callDescription": "8h-17h du lundi au samedi\n(+222) 42022255\n(+222) 42022244",
+    "socialMedia": "Réseaux sociaux",
+    "emailAddress": "Email",
+    "phone": "Téléphone",
+    "localization": "Localisation",
+    "firstNamePlaceholder": "Jean",
+    "lastNamePlaceholder": "Dupont",
+    "companyNamePlaceholder": "Votre Entreprise",
+    "emailPlaceholder": "vous@exemple.com",
+    "phoneNumberPlaceholder": "42022255",
+    "messagePlaceholder": "Votre message...",
+    "validation": {
+      "firstNameRequired": "Le prénom est requis",
+      "lastNameRequired": "Le nom de famille est requis",
+      "emailRequired": "L'email est requis",
+      "emailInvalid": "Veuillez saisir une adresse email valide",
+      "phoneRequired": "Le numéro de téléphone est requis",
+      "phoneMinLength": "Le numéro de téléphone doit contenir au moins 8 caractères",
+      "messageRequired": "Le message est requis"
+    },
+    "emailTemplate": {
+      "subject": "Nouvelle soumission de formulaire de contact",
+      "title": "Soumission de formulaire de contact",
+      "subtitle": "Nouvelle demande depuis votre site web",
+      "contactDetails": "Détails du contact",
+      "firstName": "Prénom",
+      "lastName": "Nom de famille",
+      "companyName": "Nom de l'entreprise",
+      "email": "Adresse email",
+      "phoneNumber": "Numéro de téléphone",
+      "message": "Message",
+      "notProvided": "Non fourni",
+      "footer": "CAC - Centre d'entrepreneuriat et de conseil",
+      "copyright": "© 2024 CAC - Centre d'entrepreneuriat et de conseil. Tous droits réservés.",
+      "contactInfo": "Contactez-nous: +222 42022255 | info@cac-mauritania.com"
+    },
+    "notifications": {
+      "sending": "Envoi en cours...",
+      "emailSentSuccess": "Email envoyé avec succès !",
+      "emailSentSuccessDescription": "Merci pour votre message. Nous vous répondrons bientôt.",
+      "errorPrefix": "Erreur",
+      "unexpectedErrorPrefix": "Erreur inattendue",
+      "tryAgainLater": "Veuillez réessayer plus tard."
+    }
+  },
+  "Footer": {
+    "location": "Nouakchott, Mauritanie",
+    "contactUs": "Contactez-nous",
+    "phone": "Téléphone",
+    "mobile": "Portable",
+    "email": "E-mail",
+    "services": "Nos services",
+    "Prefabricated Building": "Bâtiment préfabriqué",
+    "waterElectricity": "Eau et électricité",
+    "Solar Energy": "Énergie solaire",
+    "logistics": "Logistique",
+    "switchLanguage": "Changer de langue",
+    "viewOnMap": "Voir sur Google Maps",
+    "allRightsReserved": "Tous droits réservés."
+  },
+  "TopNav": {
+    "ContactUs": "Contactez-nous",
+    "GetAQuote": "Obtenez un devis",
+    "CallUs": "Call Us"
+  },
+  "LocaleSwitcher": {
+    "select-language": "Choisir la langue"
+  },
+  "Gallery": {
+    "statistics": {
+      "items": "éléments",
+      "images": "images",
+      "videos": "vidéos",
+      "item": "élément",
+      "image": "image",
+      "video": "vidéo"
+    },
+    "filters": {
+      "filterByType": "Filtrer par type :",
+      "allTypes": "Tous les types",
+      "imagesOnly": "Images uniquement",
+      "videosOnly": "Vidéos uniquement"
+    },
+    "mediaPreview": {
+      "image": "Image",
+      "video": "Vidéo",
+      "of": "de",
+      "keyboardInstructions": "Utilisez les flèches pour naviguer • Espace pour lire/pause • ESC pour fermer",
+      "imageKeyboardInstructions": "Utilisez les flèches pour naviguer • Espace pour lire/pause • ESC pour fermer • +/- pour zoomer • 0 pour réinitialiser",
+      "zoomOut": "Dézoomer (-)",
+      "zoomIn": "Zoomer (+)",
+      "resetZoom": "Réinitialiser le zoom (0)",
+      "toggleFullscreen": "Basculer plein écran",
+      "close": "Fermer (ESC)",
+      "previous": "Précédent (←)",
+      "next": "Suivant (→)",
+      "playPause": "Lire/Pause (Espace)",
+      "muteUnmute": "Muet/Son (M)"
+    },
+    "states": {
+      "loading": "Chargement des éléments...",
+      "noMediaFound": "Aucun média trouvé",
+      "noMediaDescription": "Cette galerie ne contient aucun élément média pour le moment.",
+      "errorLoading": "Quelque chose s'est mal passé",
+      "errorDescription": "Erreur lors du chargement des médias de la galerie. Veuillez réessayer plus tard.",
+      "tryAgain": "Réessayer",
+      "retrying": "Nouvelle tentative...",
+      "loadingMore": "Chargement de plus...",
+      "allItemsLoaded": "Tous les éléments chargés",
+      "scrollForMore": "Faites défiler pour plus...",
+      "noImagesFound": "Aucune image trouvée",
+      "noVideosFound": "Aucune vidéo trouvée",
+      "filterEmptyDescription": "Essayez de changer le filtre ou revenez plus tard.",
+      "showAllItems": "Afficher tous les éléments"
+    },
+    "errors": {
+      "accessDenied": "Accès refusé. Veuillez vérifier vos permissions.",
+      "networkError": "Erreur réseau. Veuillez vérifier votre connexion.",
+      "invalidFileFormat": "Format de fichier URL invalide."
+    }
+  }
+}

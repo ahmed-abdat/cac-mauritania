@@ -1,0 +1,494 @@
+---
+globs: "*.ts,*.tsx"
+description: "TypeScript and React patterns for MBI project components and utilities"
+---
+
+# TypeScript and React Patterns
+
+## Component Structure
+
+### File Organization
+
+```typescript
+// 1. Imports (external first, then internal)
+import React from "react";
+import { useTranslations } from "next-intl";
+import { Button } from "@/components/ui/button";
+import { ContactFormProps } from "@/types/forms";
+
+// 2. Types and interfaces
+interface ComponentProps {
+  locale: "en" | "fr" | "ar";
+  isRTL?: boolean;
+}
+
+// 3. Main component
+export function ComponentName({ locale, isRTL }: ComponentProps) {
+  // Component logic
+}
+
+// 4. Subcomponents (if any)
+function SubComponent() {
+  // Subcomponent logic
+}
+
+// 5. Helper functions
+function helperFunction() {
+  // Helper logic
+}
+
+// 6. Static data/constants
+const STATIC_DATA = {
+  // Constants
+};
+```
+
+### Component Naming
+
+- Use PascalCase for component names
+- Use descriptive names that indicate purpose
+- Prefix with domain when needed (e.g., `ContactForm`, `MediaGallery`)
+
+## TypeScript Patterns
+
+### Interface Definitions
+
+```typescript
+// Prefer interfaces over types
+interface UserData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  companyName?: string; // Optional fields with ?
+}
+
+// For unions and complex types, use type
+type Locale = "en" | "fr" | "ar";
+type Theme = "light" | "dark";
+```
+
+### Props Interfaces
+
+```typescript
+// Always define props interface
+interface ButtonProps {
+  variant: "primary" | "secondary";
+  size?: "sm" | "md" | "lg";
+  children: React.ReactNode;
+  onClick?: () => void;
+  disabled?: boolean;
+  isLoading?: boolean;
+}
+
+// Use React.ComponentProps for extending HTML elements
+interface InputProps extends React.ComponentProps<"input"> {
+  label: string;
+  error?: string;
+}
+```
+
+### Server Components vs Client Components
+
+```typescript
+// Server Component (default)
+import { db } from "@/config/firebase";
+
+export async function ProductListing() {
+  const products = await db.collection("products").get();
+  return <div>{/* Server-rendered content */}</div>;
+}
+
+// Client Component (when needed)
+("use client");
+import { useState } from "react";
+
+export function InteractiveButton() {
+  const [count, setCount] = useState(0);
+  return <button onClick={() => setCount((c) => c + 1)}>{count}</button>;
+}
+```
+
+## Internationalization Patterns
+
+### Translation Hook Usage
+
+```typescript
+import { useTranslations } from "next-intl";
+
+export function ContactForm() {
+  const t = useTranslations("contact.form");
+  const tValidation = useTranslations("contact.validation");
+  const tNotifications = useTranslations("contact.notifications");
+
+  return (
+    <form>
+      <label>{t("firstName")}</label>
+      <input
+        placeholder={t("firstNamePlaceholder")}
+        aria-label={t("firstName")}
+      />
+    </form>
+  );
+}
+```
+
+### RTL Support
+
+```typescript
+interface RTLAwareProps {
+  locale: "en" | "fr" | "ar";
+  children: React.ReactNode;
+}
+
+export function RTLContainer({ locale, children }: RTLAwareProps) {
+  const isRTL = locale === "ar";
+
+  return (
+    <div
+      dir={isRTL ? "rtl" : "ltr"}
+      className={cn("text-start", isRTL && "font-arabic")}
+    >
+      {children}
+    </div>
+  );
+}
+```
+
+## Form Patterns
+
+### Form Validation with Zod
+
+```typescript
+import { z } from "zod";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+// Schema factory for internationalization
+export function createContactSchema(validationMessages: ValidationMessages) {
+  return z.object({
+    firstName: z.string().min(1, validationMessages.firstNameRequired),
+    email: z
+      .string()
+      .min(1, validationMessages.emailRequired)
+      .email(validationMessages.emailInvalid),
+  });
+}
+
+// Usage in component
+export function ContactForm({ validationMessages }: Props) {
+  const schema = createContactSchema(validationMessages);
+  type FormData = z.infer<typeof schema>;
+
+  const form = useForm<FormData>({
+    resolver: zodResolver(schema),
+  });
+
+  // Form implementation
+}
+```
+
+### Server Actions
+
+```typescript
+"use server";
+import { z } from "zod";
+
+const emailSchema = z.object({
+  firstName: z.string().min(1),
+  lastName: z.string().min(1),
+  email: z.string().email(),
+  message: z.string().min(10),
+});
+
+export async function sendEmail(data: FormData) {
+  try {
+    const validatedData = emailSchema.parse({
+      firstName: data.get("firstName"),
+      lastName: data.get("lastName"),
+      email: data.get("email"),
+      message: data.get("message"),
+    });
+
+    // Email sending logic
+    return { success: true };
+  } catch (error) {
+    return { success: false, error: "Validation failed" };
+  }
+}
+```
+
+## Styling Patterns
+
+### Tailwind with cn() Utility
+
+```typescript
+import { cn } from "@/lib/utils";
+
+interface ButtonProps {
+  variant: "primary" | "secondary";
+  size: "sm" | "lg";
+  className?: string;
+}
+
+export function Button({ variant, size, className, ...props }: ButtonProps) {
+  return (
+    <button
+      className={cn(
+        "rounded-lg font-medium transition-colors",
+        {
+          "bg-primary-blue text-white hover:bg-primary-lightBlue":
+            variant === "primary",
+          "bg-gray-100 text-gray-900 hover:bg-gray-200":
+            variant === "secondary",
+          "px-3 py-1.5 text-sm": size === "sm",
+          "px-6 py-3 text-base": size === "lg",
+        },
+        className
+      )}
+      {...props}
+    />
+  );
+}
+```
+
+### Brand Colors Usage
+
+```typescript
+// Use Tailwind config colors
+const brandColors = {
+  primary: '#533df6',      // primary-blue
+  secondary: '#3925d2',    // primary-lightBlue
+  accent: '#2615ac',       // primary-darkBlue
+} as const
+
+// In components
+<div className="bg-primary-blue text-white">
+  <span className="text-primary-lightBlue">Accent text</span>
+</div>
+```
+
+## Performance Patterns
+
+### Lazy Loading
+
+```typescript
+import dynamic from "next/dynamic";
+import { Suspense } from "react";
+
+// Dynamic import for heavy components
+const HeavyComponent = dynamic(() => import("@/components/HeavyComponent"), {
+  loading: () => <div>Loading...</div>,
+  ssr: false, // Client-only if needed
+});
+
+// Usage with Suspense
+export function Page() {
+  return (
+    <Suspense fallback={<LoadingSkeleton />}>
+      <HeavyComponent />
+    </Suspense>
+  );
+}
+```
+
+### Image Optimization
+
+```typescript
+import Image from "next/image";
+
+export function OptimizedImage({ src, alt }: ImageProps) {
+  return (
+    <Image
+      src={src}
+      alt={alt}
+      width={800}
+      height={600}
+      priority={false} // Only for above-fold images
+      placeholder="blur"
+      blurDataURL="data:image/jpeg;base64,..."
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+    />
+  );
+}
+```
+
+## Error Handling Patterns
+
+### Error Boundaries
+
+```typescript
+"use client";
+import { Component, ErrorInfo, ReactNode } from "react";
+
+interface ErrorBoundaryState {
+  hasError: boolean;
+  error?: Error;
+}
+
+export class ErrorBoundary extends Component<
+  { children: ReactNode },
+  ErrorBoundaryState
+> {
+  constructor(props: { children: ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error("Error caught by boundary:", error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="text-center p-6">
+          <h2>Something went wrong</h2>
+          <button onClick={() => this.setState({ hasError: false })}>
+            Try again
+          </button>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
+```
+
+### Async Error Handling
+
+```typescript
+async function handleFormSubmit(data: FormData) {
+  try {
+    setIsLoading(true);
+    const result = await sendEmail(data);
+
+    if (result.success) {
+      toast.success(t("notifications.emailSentSuccess"));
+    } else {
+      toast.error(`${t("notifications.errorPrefix")}: ${result.error}`);
+    }
+  } catch (error) {
+    console.error("Form submission error:", error);
+    toast.error(
+      `${t("notifications.unexpectedErrorPrefix")}: ${
+        error instanceof Error ? error.message : "Unknown error"
+      }`
+    );
+  } finally {
+    setIsLoading(false);
+  }
+}
+```
+
+## Testing Patterns
+
+### Component Testing Setup
+
+```typescript
+import { render, screen } from "@testing-library/react";
+import { NextIntlClientProvider } from "next-intl";
+import { ContactForm } from "./ContactForm";
+
+const mockMessages = {
+  contact: {
+    form: {
+      firstName: "First Name",
+      submit: "Send Message",
+    },
+  },
+};
+
+function renderWithIntl(component: React.ReactElement) {
+  return render(
+    <NextIntlClientProvider locale="en" messages={mockMessages}>
+      {component}
+    </NextIntlClientProvider>
+  );
+}
+
+describe("ContactForm", () => {
+  it("renders form fields", () => {
+    renderWithIntl(<ContactForm />);
+    expect(screen.getByLabelText("First Name")).toBeInTheDocument();
+  });
+});
+```
+
+## Security Patterns
+
+### Input Sanitization
+
+```typescript
+import DOMPurify from "dompurify";
+
+function sanitizeInput(input: string): string {
+  return DOMPurify.sanitize(input, {
+    ALLOWED_TAGS: [],
+    ALLOWED_ATTR: [],
+  });
+}
+
+// Use in forms
+const sanitizedMessage = sanitizeInput(formData.message);
+```
+
+### Environment Variable Validation
+
+```typescript
+import { z } from "zod";
+
+const envSchema = z.object({
+  EMAIL_USER: z.string().email(),
+  EMAIL_PASS: z.string().min(1),
+  PUBLIC_URL: z.string().url(),
+});
+
+export const env = envSchema.parse({
+  EMAIL_USER: process.env.EMAIL_USER,
+  EMAIL_PASS: process.env.EMAIL_PASS,
+  PUBLIC_URL: process.env.PUBLIC_URL,
+});
+```
+
+## Common Anti-patterns to Avoid
+
+### Don't
+
+```typescript
+// ❌ Any types
+function processData(data: any) {}
+
+// ❌ Inline styles
+<div style={{ backgroundColor: '#533df6' }}>
+
+// ❌ Hardcoded text
+<button>Send Message</button>
+
+// ❌ Large useEffect
+useEffect(() => {
+  // 50 lines of code
+}, [dep1, dep2, dep3, dep4])
+```
+
+### Do
+
+```typescript
+// ✅ Proper typing
+function processData(data: ContactFormData) {}
+
+// ✅ Tailwind classes
+<div className="bg-primary-blue">
+
+// ✅ Internationalized text
+<button>{t('form.submit')}</button>
+
+// ✅ Split into smaller effects
+useEffect(() => {
+  // Single responsibility
+}, [specificDep])
+```

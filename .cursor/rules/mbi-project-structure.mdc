@@ -1,0 +1,114 @@
+---
+alwaysApply: true
+description: "MBI Modern Building Industry project structure and development guidelines"
+---
+
+# MBI - Modern Building Industry Project Rules
+
+## Project Overview
+
+This is a multilingual business website for MBI Group (Modern Building Industry) built with Next.js 15, supporting English, French, and Arabic with RTL support.
+
+## Tech Stack & Dependencies
+
+- **Framework**: Next.js 15 with App Router
+- **Language**: TypeScript (strict mode)
+- **Styling**: Tailwind CSS + Shadcn UI + Radix UI
+- **Internationalization**: next-intl with locales ["en", "fr", "ar"]
+- **Database**: Firebase Firestore
+- **Email**: Nodemailer with Gmail SMTP
+- **Deployment**: Vercel (implied from structure)
+
+## Project Structure
+
+```
+src/
+├── app/[locale]/           # Internationalized routes
+├── components/             # Reusable components
+│   ├── ui/                # Shadcn UI components
+│   ├── home/              # Homepage sections
+│   ├── header/            # Navigation components
+│   └── media/             # Gallery/media components
+├── config/                # Configuration files
+├── constats/              # Constants and static data
+├── hooks/                 # Custom React hooks
+├── i18n/                  # Internationalization setup
+├── lib/                   # Utility libraries
+├── types/                 # TypeScript type definitions
+└── utils/                 # Utility functions
+```
+
+## Coding Standards
+
+### TypeScript Usage
+
+- Use TypeScript for all code; prefer interfaces over types
+- Avoid enums; use maps instead
+- Use functional components with TypeScript interfaces
+- Always define proper types for props and data structures
+
+### Code Style and Structure
+
+- Write concise, technical TypeScript code with accurate examples
+- Use functional and declarative programming patterns; avoid classes
+- Prefer iteration and modularization over code duplication
+- Use descriptive variable names with auxiliary verbs (e.g., isLoading, hasError)
+- Structure files: exported component, subcomponents, helpers, static content, types
+
+### Naming Conventions
+
+- Use lowercase with dashes for directories (e.g., components/auth-wizard)
+- Favor named exports for components
+- Use PascalCase for component names
+- Use camelCase for variables and functions
+
+### UI and Styling
+
+- Use Shadcn UI, Radix, and Tailwind for components and styling
+- Implement responsive design with Tailwind CSS; use mobile-first approach
+- Follow the brand color scheme:
+  - Primary: #533df6 (primary.blue)
+  - Light Blue: #3925d2 (primary.lightBlue)
+  - Dark Blue: #2615ac (primary.darkBlue)
+
+### Performance Optimization
+
+- Minimize 'use client', 'useEffect', and 'setState'; favor React Server Components (RSC)
+- Wrap client components in Suspense with fallback
+- Use dynamic loading for non-critical components
+- Optimize images: use WebP format, include size data, implement lazy loading
+
+### Internationalization Rules
+
+- Support three locales: en, fr, ar
+- Implement RTL support for Arabic
+- Use next-intl for all translations
+- Store translations in `messages/` directory
+- Never hardcode text - always use translation keys
+- Structure translation files consistently across all locales
+
+### Key Conventions
+
+- Use 'nuqs' for URL search parameter state management
+- Optimize Web Vitals (LCP, CLS, FID)
+- Limit 'use client' usage:
+  - Favor server components and Next.js SSR
+  - Use only for Web API access in small components
+  - Avoid for data fetching or state management
+
+## File References
+
+- Main layout: [src/app/[locale]/layout.tsx](mdc:src/app/[locale]/layout.tsx)
+- Tailwind config: [tailwind.config.js](mdc:tailwind.config.js)
+- Global styles: [src/app/[locale]/globals.css](mdc:src/app/[locale]/globals.css)
+- Site config: [src/config/site.ts](mdc:src/config/site.ts)
+- Email template: [src/utils/templates/emailTemplate.ts](mdc:src/utils/templates/emailTemplate.ts)
+- Contact form: [src/components/ContactForm.tsx](mdc:src/components/ContactForm.tsx)
+
+## Environment Variables
+
+Required for email functionality:
+
+- `EMAIL_USER`: Gmail address for sending emails
+- `EMAIL_PASS`: Gmail App Password
+- `PUBLIC_URL`: Company logo URL for email templates

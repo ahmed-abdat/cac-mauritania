@@ -1,0 +1,226 @@
+# Email System and Contact Form Patterns
+
+## Email Configuration (Nodemailer)
+
+### Environment Setup
+
+Required environment variables:
+
+```bash
+EMAIL_USER=your_email@gmail.com
+EMAIL_PASS=your_app_password_here  # Gmail App Password
+PUBLIC_URL=https://your-domain.com/logo.jpg
+```
+
+### Gmail App Password Setup
+
+1. Enable 2-Factor Authentication on Gmail account
+2. Go to Google Account Settings → Security → App passwords
+3. Generate app password for "Mail" application
+4. Use generated password (format: xxxx xxxx xxxx xxxx) in `EMAIL_PASS`
+
+## Email Template Guidelines
+
+### File Location
+
+- Template: [src/utils/templates/emailTemplate.ts](mdc:src/utils/templates/emailTemplate.ts)
+- Function: `createEmailTemplate(data: EmailData)`
+
+### Design Principles
+
+- **Clean and minimal**: No flashy colors or complex gradients
+- **Professional appearance**: Simple typography and proper spacing
+- **Brand consistency**: Use brand colors sparingly (#533df6 for accents only)
+- **Readable layout**: Clear sections with proper hierarchy
+- **Mobile responsive**: Works on all device sizes
+
+### Template Structure
+
+```typescript
+interface EmailData {
+  firstName: string;
+  lastName: string;
+  companyName?: string;
+  email: string;
+  phoneNumber: string;
+  message: string;
+}
+```
+
+### Required Elements
+
+1. **Header**: Company logo and notification badge
+2. **Alert Banner**: Clear notification of new contact
+3. **Contact Information**: Grid layout with icons and labels
+4. **Message Section**: Clean display of user message
+5. **Action Buttons**: Reply and call buttons
+6. **Footer**: Company contact details and auto-generated notice
+
+## Contact Form Implementation
+
+### Form Validation (Multilingual)
+
+- Use `createFormSchema(validationMessages)` from [src/types/formSchema.ts](mdc:src/types/formSchema.ts)
+- Implement Zod validation with internationalized error messages
+- Support for all three locales (en, fr, ar)
+
+### Translation Structure
+
+Each language file must include:
+
+```json
+{
+  "contact": {
+    "form": {
+      "firstName": "...",
+      "lastName": "...",
+      "companyName": "...",
+      "email": "...",
+      "phoneNumber": "...",
+      "message": "...",
+      "submit": "..."
+    },
+    "validation": {
+      "firstNameRequired": "...",
+      "lastNameRequired": "...",
+      "emailRequired": "...",
+      "emailInvalid": "...",
+      "phoneRequired": "...",
+      "messageRequired": "..."
+    },
+    "notifications": {
+      "sending": "...",
+      "emailSentSuccess": "...",
+      "emailSentSuccessDescription": "...",
+      "errorPrefix": "...",
+      "unexpectedErrorPrefix": "..."
+    }
+  }
+}
+```
+
+### Toast Notifications
+
+- Use translated messages for all toast notifications
+- Include loading states with translated text
+- Handle both success and error scenarios
+- Pass notification translations to ContactForm component
+
+## Server Action Implementation
+
+### File Location
+
+- Server action: [src/app/action.ts](mdc:src/app/action.ts)
+- Function: `sendEmail(data: EmailData)`
+
+### Email Sending Configuration
+
+```typescript
+const transporter = nodemailer.createTransporter({
+  service: "gmail",
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
+  },
+});
+
+const mailOptions = {
+  from: process.env.EMAIL_USER,
+  to: process.env.EMAIL_USER, // Send to yourself
+  subject: "New Contact Request - MBI",
+  html: createEmailTemplate(data),
+  attachments: [
+    {
+      filename: "logo.jpg",
+      path: process.env.PUBLIC_URL,
+      cid: "logo",
+    },
+  ],
+};
+```
+
+## Best Practices
+
+### Security
+
+- Never expose email credentials in client-side code
+- Use Gmail App Passwords instead of regular passwords
+- Validate all form inputs on server side
+- Sanitize user input before including in email templates
+
+### Internationalization
+
+- Never hardcode text in email templates
+- Use dynamic year generation: `new Date().getFullYear()`
+- Format dates according to locale
+- Ensure proper RTL support for Arabic
+
+### Error Handling
+
+- Provide meaningful error messages in user's language
+- Log errors for debugging but don't expose sensitive details
+- Implement graceful fallbacks for email delivery failures
+- Use proper HTTP status codes in responses
+
+### Performance
+
+- Keep email templates lightweight
+- Optimize images (use WebP when possible)
+- Implement proper loading states
+- Cache translations appropriately
+
+## Testing Guidelines
+
+### Email Testing
+
+1. Test with all three locales
+2. Verify email formatting in different email clients
+3. Test both success and failure scenarios
+4. Validate all form fields work correctly
+5. Ensure responsive design works in email clients
+
+### Form Testing
+
+1. Test validation messages in all languages
+2. Verify form submission and loading states
+3. Test error handling for network failures
+4. Validate email delivery and content
+5. Test accessibility features
+
+## Common Patterns
+
+### Logo Attachment
+
+Always include logo as attachment with CID reference:
+
+```html
+<img src="cid:logo" alt="MBI" />
+```
+
+### Action Buttons
+
+Include clickable action buttons in emails:
+
+```html
+<a href="mailto:${data.email}?subject=Re: Votre demande de contact">
+  Répondre à ${data.firstName}
+</a>
+<a href="tel:${data.phoneNumber}"> Appeler ${data.firstName} </a>
+```
+
+### Responsive Email CSS
+
+Use media queries for mobile responsiveness:
+
+```css
+@media (max-width: 600px) {
+  .header-content {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  .action-buttons {
+    flex-direction: column;
+  }
+}
+```

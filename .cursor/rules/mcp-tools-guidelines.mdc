@@ -1,0 +1,230 @@
+---
+description: "Guidelines for using MCP tools effectively in development workflow"
+---
+
+# MCP Tools Usage Guidelines
+
+This guide covers when and how to use various MCP (Model Context Protocol) tools available in the development environment.
+
+## Sequential Thinking MCP
+
+**Tool**: `mcp_sequential-thinking_sequentialthinking`
+
+### When to Use
+
+- Breaking down complex problems into logical steps
+- Planning multi-step solutions or refactoring
+- Analyzing problems where the scope isn't clear initially
+- Tasks requiring careful reasoning and course correction
+
+### Best Practices
+
+- Start with initial estimate of needed thoughts
+- Question or revise previous thoughts when new information emerges
+- Express uncertainty when present
+- Use revision capabilities to improve reasoning
+- Generate solution hypothesis and verify based on reasoning
+- Only mark complete when satisfied with the solution
+
+## Search Tools
+
+### Brave Search MCP
+
+**Tools**: `mcp_brave-search_brave_web_search`, `mcp_brave-search_brave_local_search`
+
+#### Web Search (`brave_web_search`)
+
+- **Use for**: General queries, news, articles, online content
+- **Best for**: Technology updates, documentation, tutorials
+- **Limit**: 20 results per request
+- **Example**: Searching for "Next.js 15 App Router best practices"
+
+#### Local Search (`brave_local_search`)
+
+- **Use for**: Business locations, restaurants, local services
+- **Best for**: Queries about physical places ("pizza near Central Park")
+- **Limit**: 20 results per request
+- **Auto-fallback**: Falls back to web search if no local results
+
+### Exa Search MCP
+
+**Multiple specialized search functions**
+
+#### General Web Search (`web_search_exa`)
+
+- **Use for**: Real-time web searches with content scraping
+- **Best for**: Getting detailed content from most relevant websites
+- **Default**: 5 results (configurable)
+
+#### Research Papers (`research_paper_search_exa`)
+
+- **Use for**: Academic papers, scholarly articles, research content
+- **Best for**: Scientific research, academic citations
+- **Output**: Detailed research findings and academic sources
+
+#### Company Research (`company_research_exa`)
+
+- **Use for**: Business information, financial data, company analysis
+- **Best for**: Due diligence, competitive analysis
+- **Output**: Operations, news, financial info, industry analysis
+
+#### Competitor Analysis (`competitor_finder_exa`)
+
+- **Use for**: Finding similar companies and market positioning
+- **Best for**: Competitive landscape analysis
+- **Input**: Company name + optional industry
+
+#### Content Extraction (`crawling_exa`)
+
+- **Use for**: Extracting content from specific URLs
+- **Best for**: Getting full text content from known URLs
+- **Limit**: 3000 characters default (configurable)
+
+#### Specialized Searches
+
+- **LinkedIn**: `linkedin_search_exa` - Professional profiles, companies
+- **Wikipedia**: `wikipedia_search_exa` - Factual, authoritative information
+- **GitHub**: `github_search_exa` - Repositories, code, developers
+
+## Context7 MCP
+
+**Tools**: `mcp_context7-mcp_resolve-library-id`, `mcp_context7-mcp_get-library-docs`
+
+### Workflow
+
+1. **Always** call `resolve-library-id` first unless user provides exact library ID
+2. Use the resolved ID to fetch documentation with `get-library-docs`
+
+### When to Use
+
+- Getting up-to-date library documentation
+- Finding specific API references
+- Learning about library features and usage patterns
+
+### Examples
+
+- Resolving "react hook form" → `/react-hook-form/react-hook-form`
+- Getting Next.js docs → `/vercel/next.js`
+
+## Puppeteer MCP
+
+**Tools**: Multiple browser automation functions
+
+### Available Functions
+
+- `puppeteer_navigate`: Navigate to URLs
+- `puppeteer_screenshot`: Take page screenshots
+- `puppeteer_click`: Click elements
+- `puppeteer_fill`: Fill form inputs
+- `puppeteer_select`: Select dropdown options
+- `puppeteer_hover`: Hover over elements
+- `puppeteer_evaluate`: Execute JavaScript
+
+### When to Use
+
+- Testing web applications
+- Taking screenshots for documentation
+- Automating repetitive browser tasks
+- Validating UI functionality
+- Scraping dynamic content
+
+### Safety Notes
+
+- Set `allowDangerous: false` for security
+- Use specific CSS selectors
+- Handle errors gracefully
+
+## Task Manager MCP
+
+**Tools**: Comprehensive project management system
+
+### Workflow
+
+1. `request_planning`: Register request and tasks
+2. `get_next_task`: Get first/next task
+3. Work on task → `mark_task_done`
+4. **WAIT for user approval** → `approve_task_completion`
+5. Repeat until all tasks done
+6. `approve_request_completion`: Final approval
+
+### Key Rules
+
+- **NEVER** proceed without user approval after marking tasks done
+- Always wait for explicit approval before moving to next task
+- Progress tables displayed before each approval request
+- Users can add/modify/delete tasks during process
+
+### Available Functions
+
+- `request_planning`: Start new request with tasks
+- `get_next_task`: Retrieve next pending task
+- `mark_task_done`: Mark task as completed
+- `approve_task_completion`: User approves completed task
+- `approve_request_completion`: User approves entire request
+- `add_tasks_to_request`: Add new tasks to existing request
+- `update_task`: Modify task title/description
+- `delete_task`: Remove task from request
+- `list_requests`: View all requests
+- `open_task_details`: Get specific task info
+
+## Magic MCP
+
+**Tools**: UI component generation and management
+
+### Component Builder (`21st_magic_component_builder`)
+
+- **Use for**: Creating new UI components
+- **Triggers**: User mentions `/ui`, `/21`, or requests buttons, forms, dialogs
+- **Output**: Code snippet that must be integrated into codebase
+- **Follow-up**: Always edit/add files to integrate the snippet
+
+### Component Inspiration (`21st_magic_component_inspiration`)
+
+- **Use for**: Getting component ideas and previews from 21st.dev
+- **Output**: JSON data of matching components
+- **Purpose**: Inspiration and reference, not direct code generation
+
+### Component Refiner (`21st_magic_component_refiner`)
+
+- **Use for**: Improving existing UI components with `/ui` or `/21` commands
+- **Focus**: Redesigning/refining React components (not full pages)
+- **Output**: Redesigned component with implementation instructions
+
+### Logo Search (`logo_search`)
+
+- **Use for**: Finding company logos in JSX/TSX/SVG format
+- **Triggers**: `/logo` command or requests for company logos
+- **Formats**: TSX, JSX, SVG
+- **Support**: Single and multiple logo searches
+
+## General MCP Best Practices
+
+### Tool Selection
+
+- Use **Brave Search** for general web queries and local businesses
+- Use **Exa Search** for specialized content (research, companies, GitHub)
+- Use **Context7** for library documentation
+- Use **Puppeteer** for browser automation and testing
+- Use **Task Manager** for complex multi-step projects
+- Use **Magic MCP** for UI component needs
+
+### Performance Tips
+
+- Combine complementary searches when gathering information
+- Use specific, targeted queries rather than broad searches
+- Leverage specialized search tools for their intended domains
+- Cache results when appropriate to avoid redundant calls
+
+### Error Handling
+
+- Always check tool availability before use
+- Handle API rate limits gracefully
+- Provide fallback options when tools fail
+- Log relevant errors for debugging
+
+### Security Considerations
+
+- Never expose sensitive information in search queries
+- Use safe browsing practices with Puppeteer
+- Validate user inputs before passing to MCP tools
+- Follow principle of least privilege

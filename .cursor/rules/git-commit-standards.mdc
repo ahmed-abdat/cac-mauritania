@@ -1,0 +1,212 @@
+---
+description: "Git commit standards and version control practices for MBI project"
+---
+
+# Git Commit Standards and Version Control
+
+## Commit Message Format
+
+### Structure
+
+```
+<type>: <summary>
+
+<detailed description (optional)>
+
+<issue references (optional)>
+```
+
+### Rules
+
+- Use **lowercase** for all commit messages
+- Keep the first line under **10 to 20 characters** for optimal readability
+- Add detailed description for complex changes
+- Reference issue numbers with `#<number>`
+
+## Commit Types
+
+### Primary Types
+
+- **fix:** Bug fixes (e.g., "fix: resolve contact form validation")
+- **feat:** New features (e.g., "feat: add arabic language support")
+- **perf:** Performance improvements (e.g., "perf: optimize image loading")
+- **docs:** Documentation (e.g., "docs: update api documentation")
+- **style:** Code style/formatting (e.g., "style: fix tailwind spacing")
+- **refactor:** Code restructuring (e.g., "refactor: extract form validation")
+- **test:** Testing (e.g., "test: add contact form tests")
+- **chore:** Maintenance (e.g., "chore: update dependencies")
+
+### Examples
+
+```bash
+# Bug fix
+fix: email template responsive design #123
+
+Fixed mobile layout issues in contact email template.
+Updated CSS media queries for better mobile experience.
+
+# New feature
+feat: add multilingual validation
+
+Implemented form validation in English, French, and Arabic.
+Added translation keys for all validation messages.
+
+# Performance improvement
+perf: optimize email template css
+
+Reduced CSS complexity and removed unused styles.
+Improved email rendering performance across clients.
+
+# Documentation
+docs: update email setup guide
+
+Added Gmail App Password configuration steps.
+Included environment variable requirements.
+```
+
+## Branch Management
+
+### Branch Naming
+
+- **feature/** - New features (`feature/arabic-rtl-support`)
+- **fix/** - Bug fixes (`fix/contact-form-validation`)
+- **hotfix/** - Critical fixes (`hotfix/email-delivery-issue`)
+- **docs/** - Documentation (`docs/deployment-guide`)
+- **refactor/** - Code improvements (`refactor/component-structure`)
+
+### Workflow
+
+1. Create feature branch from `main`
+2. Work in small, focused commits
+3. Keep branches up to date with `main`
+4. Use pull requests for code review
+5. Squash commits when merging to `main`
+
+## Best Practices
+
+### Commit Frequency
+
+- Commit early and often
+- Each commit should represent a logical unit of work
+- Don't commit incomplete features
+- Separate refactoring from feature changes
+
+### Commit Messages
+
+- Use imperative mood ("add" not "added" or "adds")
+- Be specific about what changed
+- Explain why, not just what
+- Reference related issues and discussions
+
+### File Organization
+
+- Group related changes in single commits
+- Separate whitespace/formatting from functional changes
+- Don't mix multiple concerns in one commit
+
+## Pre-commit Checklist
+
+### Code Quality
+
+- [ ] Code follows project style guidelines
+- [ ] All tests pass
+- [ ] No console.log statements in production code
+- [ ] TypeScript types are properly defined
+- [ ] Internationalization is implemented where needed
+
+### Email System Specific
+
+- [ ] Email templates are tested in multiple clients
+- [ ] All text is properly internationalized
+- [ ] Environment variables are documented
+- [ ] Error handling is implemented
+
+### Performance
+
+- [ ] Images are optimized (WebP format preferred)
+- [ ] No unnecessary dependencies added
+- [ ] Bundle size impact is acceptable
+- [ ] Loading states are implemented
+
+## Release Management
+
+### Versioning
+
+- Follow semantic versioning (semver)
+- Tag releases with version numbers
+- Maintain CHANGELOG.md for significant changes
+
+### Deployment
+
+- Test in staging environment before production
+- Verify email functionality after deployment
+- Check all locales work correctly
+- Monitor for errors after release
+
+## Emergency Procedures
+
+### Hotfix Process
+
+1. Create hotfix branch from `main`
+2. Fix the critical issue
+3. Test thoroughly
+4. Deploy immediately
+5. Create follow-up tasks for root cause analysis
+
+### Rollback Process
+
+1. Identify the problematic commit
+2. Create revert commit
+3. Deploy rollback
+4. Investigate and fix properly
+5. Re-deploy when ready
+
+## Git Aliases (Recommended)
+
+```bash
+# Add to .gitconfig
+[alias]
+  st = status
+  co = checkout
+  br = branch
+  ci = commit
+  cm = commit -m
+  cp = cherry-pick
+  lg = log --oneline --graph --decorate
+  unstage = reset HEAD --
+  last = log -1 HEAD
+  amend = commit --amend --no-edit
+```
+
+## Security Considerations
+
+### Sensitive Information
+
+- Never commit environment variables
+- Use .env.local for local development
+- Add sensitive files to .gitignore
+- Review commits for accidentally included secrets
+
+### Access Control
+
+- Use branch protection rules on main
+- Require pull request reviews
+- Enable status checks
+- Restrict direct pushes to main
+
+## Collaboration Guidelines
+
+### Pull Requests
+
+- Write clear PR descriptions
+- Include screenshots for UI changes
+- Reference related issues
+- Request appropriate reviewers
+- Keep PRs focused and small
+
+### Code Review
+
+- Review for functionality, not just style
+- Test changes locally when possible
+- Provide constructive feedback
+- Approve only when confident in changes
