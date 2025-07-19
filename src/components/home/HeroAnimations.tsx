@@ -26,35 +26,51 @@ export default function HeroAnimations({
   
   return (
     <>
-      <BoxReveal boxColor={"#5046e6"} duration={0.3}>
+      <BoxReveal boxColor={"#1A4FE6"} duration={0.3}>
         <SparklesText
           text={title}
-          className={cn("text-3xl font-bold mb-4", locale === "ar" ? "text-right" : "text-left")}
-          sparklesCount={5}
+          className={cn("text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-primary-lightBlue bg-clip-text text-transparent", locale === "ar" ? "text-right" : "text-left")}
+          sparklesCount={8}
         />
       </BoxReveal>
-      <BoxReveal boxColor={"#5046e6"} duration={0.4}>
+      <BoxReveal boxColor={"#1A4FE6"} duration={0.4}>
         <p
-          className={cn("text-sm md:text-base font-normal mb-4", locale === "ar" ? "text-right" : "text-left")}
+          className={cn("text-base md:text-lg lg:text-xl font-medium mb-8 text-gray-200 leading-relaxed max-w-3xl mx-auto", locale === "ar" ? "text-right" : "text-left")}
         >
           {description}
         </p>
       </BoxReveal>
-      <BoxReveal boxColor={"#5046e6"} duration={0.5}>
-        <ClickWrapper 
-          locale={locale} 
-          url="/about"
-          translationKey="aboutLink"
-        >
-          <Button
-            variant="default"
-            className="shadow-2xl bg-primary-blue"
+      <BoxReveal boxColor={"#1A4FE6"} duration={0.5}>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <ClickWrapper 
+            locale={locale} 
+            url="/about"
+            translationKey="aboutLink"
           >
-            <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white lg:text-lg">
-              {cta}
-            </span>
-          </Button>
-        </ClickWrapper>
+            <Button
+              variant="default"
+              className="shadow-2xl bg-gradient-to-r from-primary-blue to-primary-lightBlue hover:from-primary-darkBlue hover:to-primary-blue transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-semibold rounded-lg"
+            >
+              <span className="whitespace-pre-wrap text-center font-medium leading-none tracking-tight text-white">
+                {cta}
+              </span>
+            </Button>
+          </ClickWrapper>
+          <ClickWrapper 
+            locale={locale} 
+            url="/services"
+            translationKey="servicesLink"
+          >
+            <Button
+              variant="outline"
+              className="shadow-xl border-2 border-white/30 bg-white/10 backdrop-blur-sm hover:bg-white/20 transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-semibold rounded-lg"
+            >
+              <span className="whitespace-pre-wrap text-center font-medium leading-none tracking-tight text-white">
+                {locale === "ar" ? "خدماتنا" : locale === "fr" ? "Nos Services" : "Our Services"}
+              </span>
+            </Button>
+          </ClickWrapper>
+        </div>
       </BoxReveal>
     </>
   );

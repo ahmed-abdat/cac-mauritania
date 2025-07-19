@@ -27,6 +27,12 @@ const nextConfig = {
         hostname: "cacmauritanie.mr",
         pathname: "/**",
       },
+      // R2 Storage URLs (CDN subdomain)
+      {
+        protocol: "https",
+        hostname: "cdn.cacmauritanie.mr",
+        pathname: "/**",
+      },
       // R2 Storage URLs (dev URL - fallback only)
       {
         protocol: "https",

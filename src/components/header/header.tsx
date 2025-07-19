@@ -39,7 +39,7 @@ export default function Header({
             <div className="hidden sm:flex flex-col">
               <span className="text-lg font-bold text-gray-900">CAC</span>
               <span className="text-xs text-gray-600">
-                {isRTL ? "مركز الريادة والاستشارات" : locale === "fr" ? "Centre d'Entrepreneuriat" : "Entrepreneurship Center"}
+                {topNav("cacSubtitle")}
               </span>
             </div>
           </Link>

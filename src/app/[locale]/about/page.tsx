@@ -22,7 +22,7 @@ export async function generateMetadata({
     openGraph: {
       title: t("PresentationduGroupeCAC"),
       description: t("ProjetsExemples"),
-      url: `https://groupembirim.com/${locale}/about`,
+      url: `https://cac-mauritania.com/${locale}/about`,
       type: "website",
       images: [
         {

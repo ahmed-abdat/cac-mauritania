@@ -34,6 +34,7 @@ import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { Image } from "@/components/ui/image";
 import { useState } from "react";
+import LocalSwitcher from "./local-switcher";
 
 // Same navigation structure as desktop
 const navigationGroups = [
@@ -130,7 +131,7 @@ export function ModernMobileNav({ locale }: ModernMobileNavProps) {
           size="icon"
           className="lg:hidden text-gray-900 hover:bg-gray-100 hover:text-primary-blue transition-all duration-200 border border-gray-300 hover:border-primary-blue/50 shadow-sm"
         >
-          <Menu className="w-5 h-5" />
+          <Menu className="w-4 h-4" />
           <span className="sr-only">
             {t("openMenu")}
           </span>
@@ -207,6 +208,16 @@ export function ModernMobileNav({ locale }: ModernMobileNavProps) {
               </Link>
 
             </nav>
+          </div>
+        </div>
+
+        {/* Language Switcher Section */}
+        <div className="border-t border-primary-blue/10 p-6 space-y-4">
+          <div className="flex items-center justify-between">
+            <h3 className="text-sm font-medium text-primary-blue">
+              {t("language")}
+            </h3>
+            <LocalSwitcher variant="footer" className="w-auto" />
           </div>
         </div>
 

@@ -1,21 +1,26 @@
 {
   "IndexPage": {
-    "title": "CAC - Center for Entrepreneurship and Consulting",
-    "description": "CAC is a leading consulting center specializing in entrepreneurship, construction, renewable energy, and business development in Mauritania.",
+    "title": "Contemporary Artistic Construction",
+    "subtitle": "CAC - Building the Future",
+    "description": "A multidisciplinary company specializing in construction, development, solutions, and services. We strive to provide integrated solutions that keep pace with development and meet local and international market needs with efficiency and high quality.",
     "CTA": "Learn more",
-    "trustedCompaniesHeading": "THEY TRUST US"
+    "trustedCompaniesHeading": "THEY TRUST US",
+    "trustedBadge": "Trusted Partners",
+    "trustedCompaniesSubheading": "Empowering businesses across industries with innovative solutions",
+    "callNow": "Call us now",
+    "heroServices": "Construction • Renewable Energy • Agriculture • Conferences • Consulting"
   },
   "Features": {
     "sectionTitle": "Our Distinguished Services",
-    "sectionDescription": "Discover our comprehensive range of professional consulting services, designed to meet all your business needs.",
-    "feature1Title": "Entrepreneurship Consulting",
-    "feature1Description": "We provide comprehensive business development and entrepreneurship consulting services.",
-    "feature2Title": "Construction Services",
-    "feature2Description": "Professional construction consulting for ready-made and traditional building projects.",
-    "feature3Title": "Renewable Energy",
-    "feature3Description": "Innovative renewable energy solutions and consulting for sustainable development.",
-    "feature4Title": "Business Development",
-    "feature4Description": "Comprehensive business development services with expert consulting and strategic planning."
+    "sectionDescription": "Discover our comprehensive range of integrated engineering and development solutions, designed to meet all your construction, energy, and sustainable development needs.",
+    "feature1Title": "Years of Excellence",
+    "feature1Description": "Proven track record in delivering exceptional projects",
+    "feature2Title": "Professional Consulting",
+    "feature2Description": "Expert guidance and strategic planning for your business success",
+    "feature3Title": "Construction Excellence",
+    "feature3Description": "Quality construction services with innovative solutions",
+    "feature4Title": "Trusted & Secure",
+    "feature4Description": "Reliable services with comprehensive quality assurance"
   },
   "NotFound": {
     "title": "404 - Page Not Found",
@@ -31,6 +36,7 @@
     "contactTitle": "Get in touch with our team",
     "callLink": "Call CAC Customer Support",
     "callTitle": "Call Our Customer Support",
+    "servicesLink": "Explore CAC services",
     "learnMorePrefix": "Learn more about"
   },
   "Navigation": {
@@ -45,6 +51,7 @@
     "Conference": "Conference",
     "Charity": "Charity",
     "Ready Build": "Ready Build",
+    "cacSubtitle": "Contemporary Construction",
     "navigationGroups": {
       "construction": {
         "title": "Construction",
@@ -61,8 +68,8 @@
     },
     "learnMore": "Learn More",
     "openMenu": "Open menu",
-    "cacSubtitle": "Entrepreneurship Center",
     "quickLinks": "Quick Links",
+    "language": "Language",
     "contactUs": "Contact Us",
     "phone": "Phone: 00222-42022255"
   },
@@ -109,27 +116,27 @@
   },
   "ready-construction": {
     "title": "Ready Construction",
-    "description": "CAC provides specialized consulting services in prefabricated construction, including design, planning, and implementation of pre-engineered buildings and rapid construction solutions.",
+    "description": "Contemporary Artistic Construction (CAC) provides innovative solutions in ready construction using the latest modern technologies. We specialize in two leading techniques: sandwich panel systems and fiber cement construction, making us pioneers in fast and sustainable building. The sandwich panel technique uses composite panels consisting of two metal layers with an internal insulating layer that provides excellent thermal and acoustic insulation properties and moisture resistance. While the fiber cement technique relies on cement reinforced with synthetic or natural fibers to provide additional strength and excellent resistance to climatic factors. Our advantages include speed of completion, cost savings, high quality, excellent resistance to moisture and fire, design flexibility, environmental sustainability, and lightweight that reduces foundation costs. We provide integrated service from design to implementation with the highest technical standards.",
     "CTA": "View More Media"
   },
   "regular-construction": {
     "title": "Regular Construction",
-    "description": "CAC offers comprehensive consulting in traditional and modern construction, including architectural design, construction project management, and execution supervision.",
+    "description": "Contemporary Artistic Construction (CAC) places great importance on regular concrete construction as one of the vital foundations in our construction projects. Regular concrete is one of the most widely used materials in construction work due to its durability, economic cost, and ease of molding. We execute all types of work related to regular concrete in foundations, floors, and barriers according to the highest quality and safety standards. We rely on specialized technical expertise and precise implementation techniques that ensure high load resistance and long-term stability for structures. Our services include preparing concrete mixes according to technical specifications, implementing foundations for residential and commercial buildings, pouring concrete floors for warehouses and industrial facilities, building concrete walls and fences, and ensuring quality through periodic inspections. We believe that excellent construction begins with a solid foundation.",
     "CTA": "View More Media"
   },
   "renewable-energy": {
     "title": "Renewable Energy",
-    "description": "CAC specializes in providing comprehensive renewable energy consulting and innovative solar solutions. We offer specialized consulting in solar energy systems and sustainable energy solutions.",
+    "description": "Contemporary Artistic Construction (CAC) seeks to contribute effectively to sustainable development by providing integrated solutions in solar and renewable energy that suit various residential, commercial, and industrial needs. We offer advanced systems including continuous energy systems that ensure permanent electrical energy flow by integrating solar panels with the electricity grid, dual energy systems that combine solar and electrical energy, in addition to evening energy systems, stored energy systems, and smart solar poles. We rely on a specialized technical and engineering team and modern technologies to ensure the highest efficiency levels, with preliminary technical studies to determine the most suitable solutions for each project. We provide our clients with a sustainable and smart choice to achieve energy independence and reduce operational costs.",
     "CTA": "View More Media"
   },
   "agriculture": {
     "title": "Agriculture",
-    "description": "CAC provides specialized agricultural consulting and advanced economic solutions, including feed farm development, modern irrigation systems, and drip irrigation systems.",
+    "description": "Contemporary Artistic Construction (CAC) seeks to expand its interventions in the agricultural sector by offering innovative agricultural services and modern irrigation technologies that meet the aspirations of investors and farmers. We provide integrated and sustainable solutions including design and implementation of agricultural projects from land preparation to harvest, soil and climate studies to determine the most suitable crops, and supply and installation of modern irrigation systems according to the highest standards. We also offer smart solutions to rationalize water consumption and increase agricultural productivity, in addition to training and field support of agricultural teams to ensure project success and sustainability. We specialize in the latest irrigation technologies including drip irrigation systems, sprinkler systems, subsurface irrigation, and smart irrigation using sensors and mobile applications.",
     "CTA": "View More Media"
   },
   "animal-development": {
     "title": "Animal Development",
-    "description": "CAC provides specialized consulting in animal development, including livestock project development and veterinary healthcare systems.",
+    "description": "Contemporary Artistic Construction (CAC) pays increasing attention to the field of animal development, considering it a fundamental pillar for food security and sustainable rural development. The company has developed a comprehensive package of integrated and innovative services, targeting support for producers and investors in the livestock sector and facilitating production and marketing chains.\n\nThe company's interventions include:\n• Feed cultivation and agricultural sprouting development: Adopting the latest technologies in green feed cultivation (such as sprouted barley) to provide rich, high-quality nutrition for animals, while reducing costs and achieving environmental sustainability.\n• Building barns and veterinary facilities: Designing and constructing modern barns with specifications that ensure health and nutritional comfort for animals, with the possibility of equipping them with automatic ventilation and cooling systems, and dedicated sections for treatment and care.\n• Fattening and livestock breeding projects: Establishing integrated fattening units for cattle, sheep, and camels, under veterinary and engineering supervision that ensures the highest production rates.\n• Consulting and training services: Providing technical and technological support to breeders and farmers through consultations and training courses, to spread modern and sustainable practices in livestock management.",
     "CTA": "View More Media"
   },
   "entrepreneurship-center": {
@@ -144,7 +151,7 @@
   },
   "charitable-interventions": {
     "title": "Charitable Interventions",
-    "description": "CAC organizes and implements various charitable programs and interventions, including humanitarian assistance and community development projects.",
+    "description": "Based on its deep belief in social responsibility and pioneering role in community service, Contemporary Artistic Construction (CAC) places great importance on charitable and developmental work, continuously supporting humanitarian and social initiatives that improve lives and promote solidarity values.\n\nThe company's Scientific Council serves as an effective intellectual and advisory arm in this field, overseeing the guidance and evaluation of charitable interventions according to a balanced scientific vision that ensures sustainable impact and initiative quality.\n\nThrough this council, the company seeks to identify intervention priorities based on studies and community needs, whether in education, health, orphan sponsorship, supporting needy families, or participating in developmental projects with preventive and strategic character.\n\nCAC commits to documenting partnerships with charitable sector actors and ensures implementing initiatives according to transparency, effectiveness, and sustainability principles, aligning with its institutional mission that combines economic success with societal advancement.",
     "CTA": "View More Media"
   },
   "product": {
@@ -164,10 +171,38 @@
     "description": "CAC provides specialized agricultural consulting and advanced economic solutions, including feed farm development, modern irrigation systems, and drip irrigation systems. We offer consulting on innovative agricultural systems including modern cultivation and maturation processes that provide economical and high-quality food production solutions.",
     "CTA": "See more media"
   },
+  "TrustedCompanies": {
+    "sectionTitle": "THEY TRUST US",
+    "sectionDescription": "Empowering businesses across industries with innovative solutions"
+  },
   "AboutUs": {
-    "PresentationduGroupeCAC": "Presentation of CAC Center",
-    "CenterforEntrepreneurship": "CAC - Center for Entrepreneurship and Consulting is a leading consulting center specializing in construction, renewable energy, agriculture, and business development services.",
-    "ExperienceDescription": "CAC has extensive experience in consulting and business development, having worked with both private and public sectors on various projects including construction consulting, renewable energy solutions, agricultural development, and entrepreneurship support. Here are some of our service areas:",
+    "PresentationduGroupeCAC": "Presentation of Contemporary Artistic Construction - CAC",
+    "CenterforEntrepreneurship": "Contemporary Artistic Construction (CAC) is a multidisciplinary company specializing in construction, development, solutions, and services, focusing on public health and authentic education.",
+    "CompanyType": "Type: Multidisciplinary company in construction, development, solutions, and services",
+    "CompanyLocation": "Location: Sheikh Zayed Street / Tevragh Zeina",
+    "CompanyContact": "Phone: 42420762 / 42420760 | Email: cacanktt@gmail.com",
+    "CompanyVision": "Our Vision: We strive to be pioneers in providing comprehensive and integrated solutions in construction, energy, and sustainable development, based on innovation and knowledge to serve the community and achieve comprehensive development.",
+    "CompanyMission": "Our Mission: We provide specialized and integrated services with the highest quality and professionalism standards, combining practical experience with future vision to support infrastructure and economic and social development.",
+    "ExperienceDescription": "We are a specialized multidisciplinary company, seeking to provide integrated solutions that keep pace with development and meet the needs of the local and international market efficiently and with high quality, through a professional work team and extensive scientific experience.",
+    "CoreServices": "Company Specializations",
+    "Service1Title": "Regular and Ready Construction",
+    "Service1Description": "For regular construction, we provide all construction services from regular concrete. We execute construction projects using the latest modern and contemporary techniques using ready construction systems, ensuring quality and speed of completion for both regular and ready systems. We also specialize in building caravans, ready-made houses, and guard rooms.",
+    "Service2Title": "Solar and Wind Energy",
+    "Service2Description": "Design and implementation of solar energy systems, whether backup energy, continuous energy, partial energy, or shared energy between systems (wind, electrical, solar, and generators) for electricity generation with installation and maintenance services.",
+    "Service3Title": "Agriculture and Animal Development",
+    "Service3Description": "In the agricultural field: Agricultural development, agricultural sprouting, fodder cultivation, latest irrigation methods (drip-pivot-sprinklers). In animal development: Building modern barns, development and fattening.",
+    "Service4Title": "Organizing Conferences, Forums, and Seminars",
+    "Service4Description": "Entrepreneurship Center - Mon Excellence Hall for organizing conferences, forums, and seminars to the highest professional standards.",
+    "Service5Title": "Structural and Strategic Solutions for Development",
+    "Service5Description": "Providing scientific solutions to development challenges through specialized strategic studies.",
+    "Service6Title": "Scientific Council for Charitable Works",
+    "Service6Description": "We supervise a scientific council for charitable works, which works to guide and support humanitarian initiatives according to sustainable scientific standards.",
+    "CoreValues": "Our Core Values",
+    "Value1": "Professionalism",
+    "Value2": "Transparency",
+    "Value3": "Innovation",
+    "Value4": "Sustainability",
+    "Value5": "Community Service",
     "ProjetsExemples": "Project Examples",
     "Projet1": "Construction of mining centers in Mauritania, Somelec, Radio Mauritania, Land Transport Administration, National Gendarmerie, Road Safety, Public Transport, Tanit Port, Sweed Organization, People's Bank of Mauritania, TAAZOUR, Fish Marketing Company, Sogeco, Ministry of Sanitation, Ministry of Health and National Security, TDM Broadcasting and Television Company, and KENZ Mining Company.",
     "Projet2": "As for the private sector, we have established water and plastic factories and built a large number of warehouses, halls, dwellings, and mobile premises.",
@@ -188,20 +223,6 @@
     "ElevageAgriculture": "Livestock and Agriculture",
     "CACAGRO": "CAC specializes in agricultural consulting and livestock development services.",
     "CACAGRODescription": "CAC has implemented several successful agricultural consulting projects, delivering tangible results in various regions since 2015. We provide consulting on innovative agricultural systems including modern cultivation and maturation processes that offer economical and high-quality food production solutions.",
-    "CACMedical": "Healthcare Consulting",
-    "CACMedicalDescription": "CAC provides healthcare consulting services and solutions for integrated health facilities including:",
-    "UnitesUrgents": "Units for urgent cases",
-    "UnitesMaternite": "Maternity units",
-    "UnitesIntegrees": "Integrated health units",
-    "UnitesVaccination": "Vaccination units",
-    "UnitesSang": "Blood collection units",
-    "CliniqueDentaire": "And a mobile dental clinic",
-    "AppareilsExamen": "It also provides all examination devices:",
-    "Radio": "X-ray",
-    "ECG": "ECG",
-    "ECO": "Ultrasound",
-    "MaterielLaboratoire": "Laboratory equipment",
-    "LitsFauteuils": "All types of beds and wheelchairs",
     "CACSecurite": "Safety Consulting",
     "CACSecuriteDescription": "CAC provides safety consulting services including workplace safety assessments, safety equipment recommendations, and safety protocol development for various industries.",
     "CACOffice": "Office Consulting",
@@ -245,11 +266,11 @@
     "submit": "Submit",
     "getInTouch": "Get in Touch",
     "visitUs": "Visit Us",
-    "visitDescription": "Our location is Cité smart-tevragh zeina",
+    "visitDescription": "Our location is Sheikh Zayed Street / Tevragh Zeina",
     "chatToUs": "Chat to Us",
-    "chatDescription": "Our friendly team is here to help.\ninfo@cac-mauritania.com",
+    "chatDescription": "Our friendly team is here to help.\ncacanktt@gmail.com",
     "callUs": "Call Us",
-    "callDescription": "8am-5pm Monday to Saturday\n(+222) 42022255\n(+222) 42022244",
+    "callDescription": "8am-5pm Monday to Saturday\n(+222) 42420762\n(+222) 42420760",
     "socialMedia": "Social Media",
     "emailAddress": "Email",
     "phone": "Phone",
@@ -283,7 +304,7 @@
       "notProvided": "Not provided",
       "footer": "CAC - Center for Entrepreneurship and Consulting",
       "copyright": "© 2024 CAC - Center for Entrepreneurship and Consulting. All rights reserved.",
-      "contactInfo": "Contact us: +222 42022255 | info@cac-mauritania.com"
+      "contactInfo": "Contact us: +222 42420762 / +222 42420760 | cacanktt@gmail.com"
     },
     "notifications": {
       "sending": "Sending...",
@@ -298,7 +319,7 @@
     "select-language": "Select language"
   },
   "Footer": {
-    "location": "Nouakchott, Mauritania",
+    "location": "Sheikh Zayed Street / Tevragh Zeina, Nouakchott, Mauritania",
     "contactUs": "Contact Us",
     "phone": "Phone",
     "mobile": "Mobile",
@@ -313,7 +334,188 @@
   "TopNav": {
     "ContactUs": "Contact Us",
     "GetAQuote": "Get a Quote",
-    "CallUs": "Call Us"
+    "CallUs": "Call Us",
+    "cacSubtitle": "Contemporary Construction"
+  },
+  "Services": {
+    "sectionTitle": "Our Comprehensive Services",
+    "sectionDescription": "Discover CAC's full range of specialized services designed to meet your construction, energy, and development needs with professional excellence.",
+    "bottomCTA": "Ready to start your project with CAC?",
+    "contactButton": "Get Free Consultation",
+    "callButton": "Call Now",
+    "construction": {
+      "title": "Construction & Building",
+      "description": "Complete construction solutions from traditional to modern prefabricated systems, ensuring quality and speed."
+    },
+    "energy": {
+      "title": "Renewable Energy",
+      "description": "Comprehensive solar and wind energy systems with installation, maintenance, and hybrid solutions."
+    },
+    "agriculture": {
+      "title": "Agriculture & Livestock",
+      "description": "Advanced agricultural development, hydroponic systems, modern irrigation, and livestock facilities."
+    },
+    "conferences": {
+      "title": "Conference & Events",
+      "description": "Professional event planning, conference hall management, and seminar organization services."
+    },
+    "entrepreneurship": {
+      "title": "Entrepreneurship Center",
+      "description": "Business consulting, startup support, investment solutions, and entrepreneurial mentorship programs."
+    },
+    "strategic": {
+      "title": "Strategic Development",
+      "description": "Scientific solutions for development challenges through specialized strategic studies and consulting."
+    },
+    "charity": {
+      "title": "Charitable Works",
+      "description": "Scientific council for humanitarian initiatives, community development, and sustainable charitable programs."
+    },
+    "innovation": {
+      "title": "Innovation & Technology",
+      "description": "Cutting-edge technology integration, digital solutions, and future-ready business transformation."
+    },
+    "features": {
+      "traditionalConstruction": "Traditional Construction",
+      "prefabConstruction": "Prefabricated Buildings",
+      "securityRooms": "Security & Guard Rooms",
+      "caravans": "Mobile Caravans",
+      "solarPower": "Solar Power Systems",
+      "windPower": "Wind Energy Solutions",
+      "hybridSystems": "Hybrid Energy Systems",
+      "maintenance": "Installation & Maintenance",
+      "hydroponics": "Hydroponic Farming",
+      "irrigation": "Modern Irrigation",
+      "livestock": "Livestock Development",
+      "feedCultivation": "Feed Cultivation",
+      "eventPlanning": "Event Planning",
+      "conferenceHall": "Mon Excellence Hall",
+      "seminars": "Seminars & Workshops",
+      "workshops": "Training Programs",
+      "startupSupport": "Startup Support",
+      "businessConsulting": "Business Consulting",
+      "investmentSolutions": "Investment Solutions",
+      "mentorship": "Mentorship Programs",
+      "developmentSolutions": "Development Solutions",
+      "researchBased": "Research-Based Approach",
+      "structuralChallenges": "Structural Challenges",
+      "sustainability": "Sustainability Focus",
+      "scientificCouncil": "Scientific Council",
+      "humanitarianSupport": "Humanitarian Support",
+      "communityProjects": "Community Projects",
+      "sustainableImpact": "Sustainable Impact",
+      "modernTechnology": "Modern Technology",
+      "digitalSolutions": "Digital Solutions",
+      "processOptimization": "Process Optimization",
+      "futureReady": "Future-Ready Solutions"
+    }
+  },
+  "WhyChooseCAC": {
+    "sectionTitle": "Why Choose CAC?",
+    "sectionDescription": "Discover what makes CAC the ideal partner for your construction, energy, and development projects.",
+    "stats": {
+      "serviceCategories": "Service Categories",
+      "support": "Support Available",
+      "quality": "Quality Guaranteed",
+      "possibilities": "Endless Possibilities"
+    },
+    "professionalism": {
+      "title": "Professional Excellence",
+      "description": "Scientific approach, quality assurance, and transparent communication in every project."
+    },
+    "expertise": {
+      "title": "Technical Expertise",
+      "description": "Modern equipment, latest technology, and continuous learning for superior results."
+    },
+    "comprehensive": {
+      "title": "Comprehensive Solutions",
+      "description": "All services under one roof with integrated solutions and end-to-end project management."
+    },
+    "innovation": {
+      "title": "Innovation Leadership",
+      "description": "Cutting-edge technology, future-ready solutions, and smart approaches to complex challenges."
+    },
+    "local": {
+      "title": "Local Expertise",
+      "description": "Deep local knowledge combined with international standards and community-focused approach."
+    },
+    "sustainability": {
+      "title": "Sustainability Focus",
+      "description": "Environmental care, renewable energy integration, and sustainable practices for future generations."
+    },
+    "features": {
+      "scientificApproach": "Scientific Approach",
+      "qualityAssurance": "Quality Assurance",
+      "transparency": "Transparency",
+      "reliability": "Reliability",
+      "modernEquipment": "Modern Equipment",
+      "latestTechnology": "Latest Technology",
+      "certifications": "Professional Certifications",
+      "continuousLearning": "Continuous Learning",
+      "allServices": "All Services Available",
+      "singleSource": "Single Source Solution",
+      "integratedSolutions": "Integrated Solutions",
+      "endToEnd": "End-to-End Management",
+      "cuttingEdge": "Cutting-Edge Technology",
+      "futureReady": "Future-Ready",
+      "digitalSolutions": "Digital Solutions",
+      "smartApproach": "Smart Approach",
+      "localKnowledge": "Local Knowledge",
+      "internationalStandards": "International Standards",
+      "culturalSensitivity": "Cultural Sensitivity",
+      "communityFocused": "Community Focused",
+      "environmentalCare": "Environmental Care",
+      "renewableEnergy": "Renewable Energy",
+      "sustainablePractices": "Sustainable Practices",
+      "futureGeneration": "Future Generation"
+    },
+    "values": {
+      "title": "Our Core Values",
+      "description": "The principles that guide every decision and project at CAC.",
+      "professionalism": "Professionalism",
+      "transparency": "Transparency",
+      "innovation": "Innovation",
+      "sustainability": "Sustainability",
+      "community": "Community"
+    }
+  },
+  "ContactCTA": {
+    "sectionTitle": "Get In Touch With CAC",
+    "sectionDescription": "Ready to start your project? Contact our expert team for a free consultation and personalized solutions.",
+    "phone": {
+      "title": "Call Us",
+      "description": "Speak directly with our experts for immediate assistance and project consultation."
+    },
+    "whatsapp": {
+      "title": "WhatsApp",
+      "description": "Quick and convenient messaging for instant communication and project updates."
+    },
+    "email": {
+      "title": "Email Us",
+      "description": "Send detailed project requirements and get comprehensive proposals from our team."
+    },
+    "location": {
+      "title": "Visit Our Office",
+      "description": "Meet our team in person for detailed project discussions and planning sessions.",
+      "address": "Sheikh Zayed Street / Tevragh Zeina"
+    },
+    "mainCTA": {
+      "title": "Ready to Transform Your Vision into Reality?",
+      "description": "Join hundreds of satisfied clients who trust CAC for their construction, energy, and development projects.",
+      "contactButton": "Start Your Project",
+      "callButton": "Call Now"
+    },
+    "businessHours": {
+      "title": "Business Hours",
+      "weekdays": "Monday - Friday",
+      "weekdaysTime": "8:00 AM - 6:00 PM",
+      "weekends": "Saturday",
+      "weekendsTime": "8:00 AM - 2:00 PM"
+    },
+    "responsePromise": {
+      "title": "24-Hour Response Guarantee",
+      "description": "We respond to all inquiries within 24 hours"
+    }
   },
   "Gallery": {
     "statistics": {

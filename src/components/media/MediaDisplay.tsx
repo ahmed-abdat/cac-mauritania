@@ -51,7 +51,7 @@ export default function MediaDisplay({
   // Get optimized image source
   const getOptimizedSrc = () => {
     if (error) {
-      return '/images/placeholder.jpg'; // Fallback image
+      return 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik0xMDAgMTAwTDEwMCAxMDBaIiBzdHJva2U9IiM5Q0EzQUYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik03MCA3MEwxMzAgMTMwTTEzMCA3MEw3MCAxMzAiIHN0cm9rZT0iIzlDQTNBRiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+'; // Fallback image - gray placeholder with X
     }
     
     // If it's already an R2 URL, use it as-is (ImageKit loader will handle optimization)
@@ -88,6 +88,7 @@ export default function MediaDisplay({
           blurDataURL={blurDataURL}
           onError={handleError}
           onLoad={handleLoad}
+          unoptimized={false}
         />
         {loading && (
           <div className="absolute inset-0 bg-gray-200 animate-pulse rounded" />

@@ -1,7 +1,8 @@
-import Features from '@/components/home/Features';
 import HeroContainer from '@/components/home/HeroContainer';
-import OurProducts from '@/components/home/OurProducts';
+import ServicesOverview from '@/components/home/ServicesOverview';
+import WhyChooseCAC from '@/components/home/WhyChooseCAC';
 import TrustedCompanies from '@/components/home/TrustedCompanies';
+import ContactCTA from '@/components/home/ContactCTA';
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { Locale } from '@/i18n/routing';
@@ -63,9 +64,10 @@ export default async function Home({
   return (
     <>
       <HeroContainer locale={typedLocale} />
-      <Features />
+      <ServicesOverview />
+      <WhyChooseCAC />
       <TrustedCompanies />
-      <OurProducts locale={typedLocale} />
+      <ContactCTA />
     </>
   );
 }

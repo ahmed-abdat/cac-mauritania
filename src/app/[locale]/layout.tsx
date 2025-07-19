@@ -12,6 +12,7 @@ import { Suspense } from "react";
 import { siteConfig } from "@/config/site";
 import { StagewiseToolbar } from "@stagewise/toolbar-next";
 import ReactPlugin from "@stagewise-plugins/react";
+import { cn } from "@/lib/utils";
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -64,6 +65,7 @@ export default async function RootLayout({
   params,
 }: RootLayoutProps) {
   const { locale } = await params;
+  const isRtl = locale === "ar";
 
   // Use getMessages instead of direct import
   const messages = await getMessages({ locale });
@@ -71,11 +73,11 @@ export default async function RootLayout({
   return (
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
       <body
-        className={`${
-          locale === "ar"
-            ? `${RB.className} ${tajawal.className}`
-            : roboto.className
-        }`}
+        className={cn(
+          isRtl
+            ? `${RB.className} ${tajawal.className} overflow-x-hidden`
+            : `${roboto.className} overflow-x-hidden`
+        )}
         suppressHydrationWarning
       >
         <NextIntlClientProvider locale={locale} messages={messages}>

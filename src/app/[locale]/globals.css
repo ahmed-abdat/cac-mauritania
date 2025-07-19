@@ -24,6 +24,8 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 227 85% 52%;
     --radius: 0.5rem;
+    --gradient-color: #8350e8;
+    --sparkles-color: #8350e8;
   }
 
   .dark {
@@ -46,6 +48,8 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 227 85% 65%;
+    --gradient-color: #8350e8;
+    --sparkles-color: #ffffff;
   }
 }
 

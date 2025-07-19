@@ -86,7 +86,7 @@ export default function PresentaionClient({
       {/* Enhanced Header */}
       <div className="max-w-6xl mx-auto mb-8">
         <div className="text-center mb-6">
-          <h1 className="text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h1 className="text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-primary-blue to-primary-lightBlue bg-clip-text text-transparent">
             {title}
           </h1>
         </div>
@@ -98,9 +98,6 @@ export default function PresentaionClient({
           {/* Enhanced Content Section */}
           <div className="order-1 flex flex-col justify-center space-y-6">
             <div className="space-y-4">
-              <h2 className="text-2xl lg:text-3xl font-bold text-gray-900">
-                {title}
-              </h2>
               <p className="text-gray-700 leading-relaxed text-lg">
                 {description}
               </p>
@@ -111,7 +108,7 @@ export default function PresentaionClient({
               <Link href={`/${locale}/${slug}/galary`} className="block">
                 <Button
                   variant="default"
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="w-full bg-primary-blue hover:bg-primary-darkBlue text-white shadow-lg hover:shadow-xl transition-all duration-300"
                   size="lg"
                 >
                   <Grid3X3 className="h-5 w-5 mr-2" />

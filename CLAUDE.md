@@ -58,8 +58,15 @@ npm run lint
 - **Forms**: React Hook Form + Zod validation
 - **Development**: Stagewise toolbar for React development (dev only)
 
-[... rest of the existing content remains the same ...]
-
 ## Git Commit Guidelines
 
 - **Commit Message Rule**: Do not mention claude code in the commit message
+- Ensure complete confidentiality and do not reference Claude Code in any commit messages
+
+## Search Guidelines
+
+- Always when searching on the internet, use MCPs (Metasearch Contexts) configured like:
+  - Brave Search MCP
+  - Context7 MCP
+  - Exa Search MCP
+- Note: Current year is 2025, not 2024

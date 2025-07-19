@@ -49,6 +49,7 @@ class R2UrlGenerator {
    */
   isR2Url(url: string): boolean {
     return url.includes('cacmauritanie.mr') || 
+           url.includes('cdn.cacmauritanie.mr') ||
            url.includes('pub-b49a9ad764784bc5b4b1d434f1159bf5.r2.dev') ||
            url.includes('r2.cloudflarestorage.com');
   }
@@ -57,6 +58,10 @@ class R2UrlGenerator {
    * Extract file key from R2 URL
    */
   extractKeyFromUrl(url: string): string {
+    if (url.includes('cdn.cacmauritanie.mr')) {
+      return url.replace('https://cdn.cacmauritanie.mr/', '');
+    }
+    
     if (url.includes('cacmauritanie.mr')) {
       return url.replace('https://cacmauritanie.mr/', '');
     }

@@ -162,31 +162,6 @@ export const getGalaryMedia = async (categoryId: string) => {
   }
 };
 
-export const getMeillersProducts = async () => {
-  // collection Name is meillers-produits
-  const collectionRef = collection(firestore, "meillers-produits");
-  const q = query(collectionRef, orderBy("createdAt", "desc"), limit(4));
-  try {
-    const snapshot = await getDocs(q);
-    let products: Product[] = [];
-    snapshot.forEach((doc) => {
-      const data = doc.data();
-      products.push({
-        id: doc.id,
-        title: data.title,
-        price: data.price,
-        images: data.images,
-        specification: data.specification,
-        stock: data.stock,
-        oldPrice: data.oldPrice,
-      });
-    });
-    return products;
-  } catch (error) {
-    console.log(error);
-    return [];
-  }
-};
 
 export const getMarketPlaceProduct = async (
   collectionName: string,
