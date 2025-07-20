@@ -27,28 +27,72 @@ export async function generateMetadata({
 
   return {
     metadataBase: new URL(siteConfig.url),
-    alternates: {
-      canonical: "/",
-      languages: {
-        en: `/en`,
-        fr: `/fr`,
-        ar: `/ar`,
-      },
+    title: {
+      template: `%s | ${siteConfig.name}`,
+      default: siteConfig.name,
     },
-    title: siteConfig.name,
     description: siteConfig.description,
     keywords: layoutKeywords,
+    authors: siteConfig.authors,
+    creator: siteConfig.creator,
+    publisher: siteConfig.name,
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false,
+    },
+    alternates: {
+      canonical: locale === 'ar' ? '/' : `/${locale}`,
+      languages: {
+        'en': '/en',
+        'fr': '/fr', 
+        'ar': '/ar',
+        'x-default': '/ar', // Arabic as default
+      },
+    },
     openGraph: {
-      title: siteConfig.name,
+      title: {
+        template: `%s | ${siteConfig.name}`,
+        default: siteConfig.name,
+      },
       description: siteConfig.description,
       siteName: siteConfig.name,
       locale: locale,
-      type: "website",
+      type: 'website',
+      url: locale === 'ar' ? siteConfig.url : `${siteConfig.url}/${locale}`,
+      images: [
+        {
+          url: '/og-image.jpeg',
+          width: 1200,
+          height: 630,
+          alt: siteConfig.name,
+        },
+      ],
     },
     twitter: {
-      title: siteConfig.name,
+      card: 'summary_large_image',
+      title: {
+        template: `%s | ${siteConfig.name}`,
+        default: siteConfig.name,
+      },
       description: siteConfig.description,
-      card: "summary_large_image",
+      images: ['/og-image.jpeg'],
+      creator: '@CACMauritania', // Add if you have Twitter
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+    verification: {
+      // Add Google Search Console verification when available
+      // google: 'your-google-verification-code',
     },
   };
 }
@@ -71,7 +115,30 @@ export default async function RootLayout({
   const messages = await getMessages({ locale });
 
   return (
-    <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
+    <html 
+      lang={locale} 
+      dir={locale === "ar" ? "rtl" : "ltr"}
+      prefix="og: https://ogp.me/ns#"
+    >
+      <head>
+        {/* Preconnect to external domains for performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        
+        {/* DNS prefetch for better performance */}
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+        
+        {/* Viewport meta for responsive design */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        {/* Theme color for mobile browsers */}
+        <meta name="theme-color" content="#1E40AF" />
+        <meta name="msapplication-TileColor" content="#1E40AF" />
+        
+        {/* Disable automatic phone number detection */}
+        <meta name="format-detection" content="telephone=no" />
+      </head>
       <body
         className={cn(
           isRtl
