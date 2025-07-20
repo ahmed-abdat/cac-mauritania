@@ -4,6 +4,8 @@ import { ContactForm } from "@/components/ContactForm";
 import { useTranslations } from "next-intl";
 import { contactKeywords } from "@/constats/keywords";
 import { siteConfig } from "@/config/site";
+import StructuredData from "@/components/seo/StructuredData";
+import { localBusinessSchema } from "@/lib/structured-data";
 
 interface ContactProps {
   params: Promise<{
@@ -104,6 +106,9 @@ export default function Page({ params }: ContactProps) {
 
   return (
     <>
+      {/* Local Business Schema for contact page */}
+      <StructuredData data={localBusinessSchema} id="local-business-schema" />
+      
       <h1 className="sr-only">{translations.title}</h1>
       <ContactForm translations={translations} />
     </>

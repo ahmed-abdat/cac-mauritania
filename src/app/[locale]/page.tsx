@@ -6,6 +6,8 @@ import ContactCTA from '@/components/home/ContactCTA';
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { Locale } from '@/i18n/routing';
+import StructuredData from '@/components/seo/StructuredData';
+import { organizationSchema, websiteSchema } from '@/lib/structured-data';
 
 interface HomeProps {
   params: Promise<{
@@ -63,6 +65,10 @@ export default async function Home({
   
   return (
     <>
+      {/* Structured Data for SEO */}
+      <StructuredData data={organizationSchema} id="organization-schema" />
+      <StructuredData data={websiteSchema} id="website-schema" />
+      
       <HeroContainer locale={typedLocale} />
       <ServicesOverview />
       <WhyChooseCAC />
