@@ -2,6 +2,23 @@ import { ArrowLeft } from "lucide-react";
 import { Image } from "@/components/ui/image";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: '404 - Page Not Found | CAC - مركز الريادة والاستشارات',
+  description: 'The page you are looking for could not be found. Return to CAC homepage to explore our services.',
+  robots: {
+    index: false,
+    follow: false,
+    noarchive: true,
+    nosnippet: true,
+  },
+  openGraph: {
+    title: '404 - Page Not Found',
+    description: 'The page you are looking for could not be found.',
+    type: 'website',
+  },
+};
 
 export default async function NotFound() {
   // Get translations for accessibility and not found page

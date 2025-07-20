@@ -1,13 +1,18 @@
 import createNextIntlPlugin from "next-intl/plugin";
+import path from "path";
 
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Images configuration
+  // Enhanced images configuration for better performance
   images: {
     loader: "custom",
     loaderFile: "./lib/imageKitLoader.js",
+    formats: ['image/avif', 'image/webp'], // Modern image formats
+    minimumCacheTTL: 60, // Cache images for 60 seconds
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     remotePatterns: [
       // All optimised files come from ImageKit
       {
@@ -43,11 +48,101 @@ const nextConfig = {
     domains: ["localhost"],
   },
 
-  // Use experimental for server actions instead of serverActions directly
+  // Performance optimizations
+  compress: true, // Enable gzip compression
+  poweredByHeader: false, // Remove X-Powered-By header for security
+  
+  // Enhanced experimental features for Next.js 15
   experimental: {
     serverActions: {
       bodySizeLimit: "10mb", // Increased for file uploads
     },
+    optimizePackageImports: [
+      '@/components',
+      '@/lib',
+      '@/utils',
+      'lucide-react',
+      'framer-motion'
+    ],
+// Removed webVitalsAttribution - no analytics needed
+    optimizeServerReact: true, // Optimize React on server
+  },
+
+  // External packages for server components (moved from experimental)
+  serverExternalPackages: ['sharp'],
+
+  // Webpack optimizations
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    // Optimize bundle splitting
+    if (!isServer) {
+      config.optimization.splitChunks = {
+        ...config.optimization.splitChunks,
+        chunks: 'all',
+        cacheGroups: {
+          ...config.optimization.splitChunks.cacheGroups,
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all',
+            priority: 10,
+          },
+          common: {
+            name: 'common',
+            minChunks: 2,
+            chunks: 'all',
+            priority: 5,
+            reuseExistingChunk: true,
+          },
+        },
+      };
+    }
+
+    // Optimize imports
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': path.resolve('./src'),
+    };
+
+    return config;
+  },
+
+  // Security headers for better performance and SEO
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          // Security headers
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin',
+          },
+          // Performance headers
+          {
+            key: 'X-DNS-Prefetch-Control',
+            value: 'on',
+          },
+        ],
+      },
+      // Cache static assets
+      {
+        source: '/(.*)\\.(ico|png|jpg|jpeg|gif|webp|avif|svg|woff|woff2|ttf|eot|otf)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+    ];
   },
 
   // Ensure assetPrefix is correctly set for dev environment

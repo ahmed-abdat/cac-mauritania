@@ -2,7 +2,6 @@ import { MetadataRoute } from 'next'
 import { siteConfig } from '@/config/site'
 
 export default function robots(): MetadataRoute.Robots {
-  // Use the default locale (ar) for the sitemap URL
   return {
     rules: [
       {
@@ -11,10 +10,51 @@ export default function robots(): MetadataRoute.Robots {
         disallow: [
           '/api/',
           '/_next/',
+          '/admin/',
+          '/*?*', // Prevent crawling of URLs with query parameters
+          '/private/',
+          '/temp/',
         ],
       },
+      // Enhanced rules for major search engines
+      {
+        userAgent: 'Googlebot',
+        allow: '/',
+        disallow: ['/api/', '/_next/', '/admin/', '/private/'],
+        crawlDelay: 1,
+      },
+      {
+        userAgent: 'Bingbot',
+        allow: '/',
+        disallow: ['/api/', '/_next/', '/admin/', '/private/'],
+        crawlDelay: 1,
+      },
+      {
+        userAgent: 'Slurp', // Yahoo
+        allow: '/',
+        disallow: ['/api/', '/_next/', '/admin/', '/private/'],
+        crawlDelay: 2,
+      },
+      // Block aggressive crawlers
+      {
+        userAgent: 'AhrefsBot',
+        disallow: '/',
+      },
+      {
+        userAgent: 'SemrushBot',
+        disallow: '/',
+      },
+      {
+        userAgent: 'MJ12bot',
+        disallow: '/',
+      },
     ],
-    sitemap: `${siteConfig.url}/ar/sitemap.xml`,
+    sitemap: [
+      `${siteConfig.url}/sitemap.xml`,
+      `${siteConfig.url}/ar/sitemap.xml`,
+      `${siteConfig.url}/en/sitemap.xml`,
+      `${siteConfig.url}/fr/sitemap.xml`,
+    ],
     host: siteConfig.url,
   }
 }

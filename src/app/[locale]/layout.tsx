@@ -138,6 +138,17 @@ export default async function RootLayout({
         
         {/* Disable automatic phone number detection */}
         <meta name="format-detection" content="telephone=no" />
+        
+        {/* Preload critical images for better LCP */}
+        <link 
+          rel="preload" 
+          as="image" 
+          href="/hero.png" 
+          imageSizes="(max-width: 768px) 100vw, 50vw"
+          imageSrcSet="/hero.png 800w, /hero.png 1200w"
+        />
+        <link rel="preload" as="image" href="/logo.jpg" />
+        <link rel="preload" as="image" href="/og-image.jpeg" />
       </head>
       <body
         className={cn(
