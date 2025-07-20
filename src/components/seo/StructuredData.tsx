@@ -15,7 +15,6 @@ export default function StructuredData({ data, id = "structured-data" }: Structu
       id={id}
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-      strategy="beforeInteractive"
     />
   );
 }
