@@ -42,12 +42,12 @@ export async function generateMetadata({
       telephone: false,
     },
     alternates: {
-      canonical: locale === 'ar' ? '/' : `/${locale}`,
+      canonical: locale === 'ar' ? siteConfig.url : `${siteConfig.url}/${locale}`,
       languages: {
-        'en': '/en',
-        'fr': '/fr', 
-        'ar': '/ar',
-        'x-default': '/ar', // Arabic as default
+        'en': `${siteConfig.url}/en`,
+        'fr': `${siteConfig.url}/fr`, 
+        'ar': `${siteConfig.url}/ar`,
+        'x-default': `${siteConfig.url}/ar`, // Arabic as default
       },
     },
     openGraph: {

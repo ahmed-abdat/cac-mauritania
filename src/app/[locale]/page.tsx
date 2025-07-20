@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: HomeProps): Promise<Metadata>
       siteName: 'CAC',
       images: [
         {
-          url: './opengraph-image.jpeg',
+          url: '/opengraph-image.jpeg',
           width: 1200,
           height: 630,
           alt: 'CAC',
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: HomeProps): Promise<Metadata>
       card: 'summary_large_image',
       title: t('title'),
       description: t('description'),
-      images: ['./opengraph-image.jpeg'],
+      images: ['/opengraph-image.jpeg'],
     },
     alternates: {
       canonical: `https://cacmauritanie.mr/${locale}`,

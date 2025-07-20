@@ -15,6 +15,7 @@ export default function robots(): MetadataRoute.Robots {
           '/private/',
           '/temp/',
         ],
+        crawlDelay: 1, // Add crawl delay for general bots
       },
       // Enhanced rules for major search engines
       {

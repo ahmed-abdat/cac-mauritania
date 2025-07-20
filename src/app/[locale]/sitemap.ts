@@ -30,25 +30,31 @@ export default async function sitemap(
     'charitable-interventions'   // التدخلات الخيرية
   ]
 
+  // Helper function to build locale-aware URLs
+  const buildUrl = (path: string = '') => {
+    const basePath = locale === 'ar' ? '' : `/${locale}`
+    return `${siteConfig.url}${basePath}${path}`
+  }
+
   // Base routes for this locale with proper SEO priorities
   const routes: MetadataRoute.Sitemap = [
     // Homepage - Highest priority
     {
-      url: locale === 'ar' ? siteConfig.url : `${siteConfig.url}/${locale}`,
+      url: buildUrl(),
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 1.0,
     },
     // About page - High priority
     {
-      url: `${siteConfig.url}/${locale}/about`,
+      url: buildUrl('/about'),
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     // Contact page - Very high priority for business
     {
-      url: `${siteConfig.url}/${locale}/contact`,
+      url: buildUrl('/contact'),
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.9,
@@ -57,15 +63,15 @@ export default async function sitemap(
 
   // Add CAC service category pages
   const serviceRoutes: MetadataRoute.Sitemap = cacServiceCategories.map(category => ({
-    url: `${siteConfig.url}/${locale}/${category}`,
+    url: buildUrl(`/${category}`),
     lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: 0.8,
   }))
 
-  // Add gallery pages for each service category
+  // Add gallery pages for each service category (fix typo: galary -> gallery)
   const galleryRoutes: MetadataRoute.Sitemap = cacServiceCategories.map(category => ({
-    url: `${siteConfig.url}/${locale}/${category}/galary`,
+    url: buildUrl(`/${category}/gallery`),
     lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: 0.7,
