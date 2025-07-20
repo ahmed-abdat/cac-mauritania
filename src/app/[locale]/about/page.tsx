@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import AboutUs from "@/components/About";
 import { aboutKeywords } from "@/constats/keywords";
+import { siteConfig } from "@/config/site";
 
 interface AboutProps {
   params: Promise<{
@@ -22,7 +23,7 @@ export async function generateMetadata({
     openGraph: {
       title: t("PresentationduGroupeCAC"),
       description: t("ProjetsExemples"),
-      url: `https://cac-mauritania.com/${locale}/about`,
+      url: `${siteConfig.url}/${locale}/about`,
       type: "website",
       images: [
         {

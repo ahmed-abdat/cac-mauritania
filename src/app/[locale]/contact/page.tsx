@@ -3,18 +3,58 @@ import { getTranslations } from "next-intl/server";
 import { ContactForm } from "@/components/ContactForm";
 import { useTranslations } from "next-intl";
 import { contactKeywords } from "@/constats/keywords";
+import { siteConfig } from "@/config/site";
 
-export async function generateMetadata(): Promise<Metadata> {
+interface ContactProps {
+  params: Promise<{
+    locale: string;
+  }>;
+}
+
+export async function generateMetadata({
+  params,
+}: ContactProps): Promise<Metadata> {
+  const { locale } = await params;
   const t = await getTranslations("contactForm");
 
   return {
     title: t("title"),
     description: t("companyName"),
     keywords: contactKeywords,
+    openGraph: {
+      title: t("title"),
+      description: t("companyName"),
+      url: `${siteConfig.url}/${locale}/contact`,
+      type: "website",
+      images: [
+        {
+          url: `/og-image.jpeg`,
+          width: 1200,
+          height: 630,
+          alt: t("title"),
+        },
+      ],
+      siteName: siteConfig.name,
+      locale: locale,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t("title"),
+      description: t("companyName"),
+      images: ['/og-image.jpeg'],
+    },
+    alternates: {
+      canonical: `${siteConfig.url}/${locale}/contact`,
+      languages: {
+        'en': `${siteConfig.url}/en/contact`,
+        'fr': `${siteConfig.url}/fr/contact`,
+        'ar': `${siteConfig.url}/ar/contact`,
+      },
+    },
   };
 }
 
-export default function Page() {
+export default function Page({ params }: ContactProps) {
   const t = useTranslations("contactForm");
   const translations = {
     title: t("title"),
