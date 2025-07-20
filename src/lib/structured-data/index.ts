@@ -11,6 +11,17 @@ export {
   charitableServiceSchema 
 } from './services';
 
+// Import services for mapping
+import {
+  constructionServiceSchema,
+  renewableEnergyServiceSchema, 
+  agricultureServiceSchema,
+  entrepreneurshipServiceSchema,
+  animalDevelopmentServiceSchema,
+  conferenceServiceSchema,
+  charitableServiceSchema 
+} from './services';
+
 // Service category mapping for easy access
 export const serviceSchemas = {
   'ready-construction': constructionServiceSchema,
