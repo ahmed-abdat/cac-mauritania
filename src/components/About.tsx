@@ -137,52 +137,6 @@ export default function AboutUs() {
         </div>
       </motion.section>
 
-      {/* Project Examples Section */}
-      <motion.section
-        className="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={containerVariants}
-      >
-        <div className="container mx-auto px-4">
-          <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                <Award className="w-5 h-5 text-primary" />
-              </div>
-              {t("ProjetsExemples")}
-            </h2>
-            <div className="flex items-center justify-center gap-2">
-              <div className="w-12 h-1 bg-gradient-to-r from-primary/40 to-primary rounded-full" />
-              <div className="w-3 h-3 rounded-full bg-primary animate-pulse" />
-              <div className="w-12 h-1 bg-gradient-to-r from-primary-blue to-primary-blue/40 rounded-full" />
-            </div>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {["Projet1", "Projet2", "Projet3"].map((projet) => (
-              <motion.div
-                key={projet}
-                variants={itemVariants}
-                className="group bg-white rounded-2xl p-6 border border-gray-100 transition-all duration-500 hover:scale-105"
-                whileHover={{ y: -5 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="p-4 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500">
-                    <Award className="w-6 h-6" />
-                  </div>
-                  <div className="w-8 h-1 bg-gradient-to-r from-primary/40 to-primary rounded-full group-hover:from-primary group-hover:to-primary/60" />
-                </div>
-                <div className="mb-4">
-                  <p className="text-gray-700 text-sm leading-relaxed group-hover:text-gray-600 transition-colors duration-300">{t(projet)}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </motion.section>
 
       {/* Core Services Section */}
       <motion.section
@@ -470,12 +424,8 @@ export default function AboutUs() {
                   <span dir="ltr">{CONTACT_INFO.PRIMARY_PHONE_FULL}</span>
                 </p>
                 <p>
-                  <span className="font-medium">{footerT("mobile")}: </span>
-                  <span dir="ltr">{CONTACT_INFO.SECONDARY_PHONE_FULL}</span>
-                </p>
-                <p>
                   <span className="font-medium">{footerT("email")}: </span>
-                  <span dir="ltr">cacanktt@gmail.com</span>
+                  <span dir="ltr">{CONTACT_INFO.EMAIL}</span>
                 </p>
               </div>
             </motion.div>
