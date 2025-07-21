@@ -251,6 +251,7 @@
   },
   "AboutUs": {
     "PresentationduGroupeCAC": "Présentation de Contemporary Artistic Construction - CAC",
+    "Description": "Découvrez Contemporary Artistic Construction (CAC), une entreprise multidisciplinaire spécialisée dans la construction, le développement, les solutions et les services, axée sur la santé publique et l'éducation authentique avec expertise et haute qualité.",
     "CenterforEntrepreneurship": "Contemporary Artistic Construction (CAC) est une entreprise multidisciplinaire spécialisée dans la construction, le développement, les solutions et les services, axée sur la santé publique et l'éducation authentique.",
     "CompanyType": "Type: Entreprise multidisciplinaire dans la construction, le développement, les solutions et les services",
     "CompanyLocation": "Localisation: Tevragh Zeina Rue Sheikh Zayed Nouakchott",
@@ -583,10 +584,8 @@
     },
     "businessHours": {
       "title": "Heures d'Ouverture",
-      "weekdays": "Lundi - Vendredi",
-      "weekdaysTime": "8h00 - 18h00",
-      "weekends": "Samedi",
-      "weekendsTime": "8h00 - 14h00"
+      "weekdays": "Lundi - Samedi",
+      "weekdaysTime": "8h00 - 18h00"
     },
     "responsePromise": {
       "title": "Garantie de Réponse 24h",

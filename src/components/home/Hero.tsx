@@ -3,7 +3,7 @@ import { MoveRight, Mail } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { Locale } from "@/i18n/routing";
 import { Image } from "@/components/ui/image";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { PulsatingButton } from "@/components/magicui/pulsating-button";
 import { RippleButton } from "@/components/magicui/ripple-button";
@@ -42,7 +42,7 @@ export default async function Hero({
             
             <BlurFade delay={0.25 * 3} inView>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href={`/${locale}/contact`}>
+                <Link href="/contact">
                   <PulsatingButton 
                     className="w-full bg-primary hover:bg-primary/90 text-white shadow-md hover:shadow-lg hover:translate-y-[-1px] transition-all duration-300 px-6 py-3 text-base font-medium rounded-lg"
                     pulseColor="59, 130, 246"
@@ -54,7 +54,7 @@ export default async function Hero({
                     </div>
                   </PulsatingButton>
                 </Link>
-                <Link href={`/${locale}/about`}>
+                <Link href="/about">
                   <RippleButton 
                     className="w-full border-2 border-primary/20 hover:border-primary/40 hover:bg-primary/5 hover:translate-y-[-1px] transition-all duration-300 px-6 py-3 text-base font-medium rounded-lg"
                     rippleColor="59, 130, 246"

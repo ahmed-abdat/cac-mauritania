@@ -9,7 +9,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { Home, Info, Headphones, Hammer, Leaf, Briefcase } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
@@ -117,7 +117,7 @@ export function ModernHeader({ locale }: ModernHeaderProps) {
               </div>
               <div className="mt-6">
                 <Link
-                  href={`/${locale}/about`}
+                  href="/about"
                   className="inline-flex items-center px-4 py-2 bg-primary-blue hover:bg-primary-lightBlue text-white text-sm font-medium rounded-md shadow-md hover:shadow-lg transition-all duration-200"
                 >
                   {t("learnMore")}
@@ -130,7 +130,7 @@ export function ModernHeader({ locale }: ModernHeaderProps) {
               {group.items.map((item) => (
                 <Link
                   key={item.title}
-                  href={`/${locale}${item.href}`}
+                  href={item.href}
                   className="flex items-center justify-between hover:bg-gray-50 hover:text-primary-blue py-3 px-4 rounded-lg group transition-all duration-200 border border-transparent hover:border-primary-blue/20 hover:shadow-sm"
                 >
                   <div className="flex items-center gap-3">
@@ -162,7 +162,7 @@ export function ModernHeader({ locale }: ModernHeaderProps) {
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
               <Link
-                href={`/${locale}`}
+                href="/"
                 className={cn(
                   "inline-flex h-10 items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-gray-900 hover:text-primary-blue hover:bg-primary-blue/10 focus:bg-primary-blue/15 focus:text-primary-blue focus:outline-none transition-all duration-200 border border-transparent hover:border-primary-blue/20",
                   pathname === `/${locale}` && "bg-primary-blue/15 text-primary-blue border-primary-blue/20"
@@ -183,7 +183,7 @@ export function ModernHeader({ locale }: ModernHeaderProps) {
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
               <Link
-                href={`/${locale}/about`}
+                href="/about"
                 className={cn(
                   "inline-flex h-10 items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-gray-900 hover:text-primary-blue hover:bg-primary-blue/10 focus:bg-primary-blue/15 focus:text-primary-blue focus:outline-none transition-all duration-200 border border-transparent hover:border-primary-blue/20",
                   pathname === `/${locale}/about` && "bg-primary-blue/15 text-primary-blue border-primary-blue/20"
@@ -208,7 +208,7 @@ export function ModernHeader({ locale }: ModernHeaderProps) {
         {/* Contact Button with Star Border */}
         <StarBorder
           as={Link}
-          href={`/${locale}/contact`}
+          href="/contact"
           color="#1A4FE6"
           speed="4s"
           className="text-sm h-10 flex items-center hover:scale-105 transition-transform duration-200"

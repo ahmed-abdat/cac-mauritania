@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import DockDemo from "./Docke";
 import { CONTACT_INFO } from "@/constats/contact-info";
 import Link from "next/link";
+import { Link as I18nLink } from "@/i18n/routing";
 import { MapPin } from "lucide-react";
 
 const Footer: React.FC<{ locale: string }> = ({ locale }) => {
@@ -58,12 +59,12 @@ const Footer: React.FC<{ locale: string }> = ({ locale }) => {
           <ul className="space-y-2">
             {footerLinks.map((link) => (
               <li key={link.href}>
-                <Link
-                  href={`/${locale}${link.href}`}
+                <I18nLink
+                  href={link.href}
                   className="text-white hover:text-gray-100 transition-all duration-150 block py-1"
                 >
                   {link.title}
-                </Link>
+                </I18nLink>
               </li>
             ))}
           </ul>

@@ -14,7 +14,7 @@ import { WhatsAppIcon } from '@/components/ui/icons/WhatsAppIcon';
 import { useLocale, useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { CONTACT_INFO } from "@/constats/contact-info";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { cn } from "@/lib/utils";
 
@@ -213,21 +213,13 @@ const ContactCTA = () => {
                 </h4>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-center">
+              <div className="text-center">
                 <div className="text-gray-700 p-4">
                   <div className="font-semibold text-lg mb-2">
                     {t("businessHours.weekdays")}
                   </div>
                   <div className="text-gray-600">
                     {t("businessHours.weekdaysTime")}
-                  </div>
-                </div>
-                <div className="text-gray-700 p-4">
-                  <div className="font-semibold text-lg mb-2">
-                    {t("businessHours.weekends")}
-                  </div>
-                  <div className="text-gray-600">
-                    {t("businessHours.weekendsTime")}
                   </div>
                 </div>
               </div>
