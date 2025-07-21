@@ -41,7 +41,7 @@
   },
   "Navigation": {
     "Home": "الرئيسية",
-    "Construction": "البناء العادي",
+    "Construction": "مشاريع البناء",
     "Agriculture": "الزراعة",
     "About": "من نحن",
     "Contact": "اتصل بنا",
@@ -51,6 +51,7 @@
     "Conference": "قاعة المؤتمرات",
     "Charity": "التدخلات الخيرية",
     "Ready Build": "البناء الجاهز",
+    "Regular Construction": "البناء العادي",
     "cacSubtitle": "الإنشاءات المعاصرة",
     "navigationGroups": {
       "construction": {
@@ -109,6 +110,41 @@
     "discover": "اكتشف",
     "area": "المساحة",
     "price": "السعر"
+  },
+  "ConstructionProjects": {
+    "title": "أحدث مشاريعنا الإنشائية",
+    "subtitle": "استكشف أحدث مشاريع البناء التي تعرض الحرفية عالية الجودة والتصميم المبتكر.",
+    "keyFeatures": "المميزات الأساسية",
+    "viewDetails": "عرض التفاصيل",
+    "viewProject": "عرض المشروع",
+    "viewAllProjects": "عرض جميع المشاريع",
+    "showMore": "عرض المزيد من المشاريع",
+    "images": "صورة",
+    "totalImages": "إجمالي الصور",
+    "projectDate": "تاريخ المشروع",
+    "relatedProjects": "مشاريع ذات صلة",
+    "projectGallery": "معرض المشروع",
+    "backToProjects": "العودة إلى المشاريع",
+    "allProjectsTitle": "جميع المشاريع الإنشائية",
+    "allProjectsDescription": "استكشف محفظتنا الكاملة من مشاريع البناء التي تعرض الحرفية عالية الجودة والتصميم المبتكر في فئات البناء الجاهز والبناء التقليدي.",
+    "totalProjects": "مشاريع",
+    "loadingMore": "جاري التحميل...",
+    "allProjectsLoaded": "تم تحميل جميع المشاريع",
+    "noProjectsInCategory": "لا توجد مشاريع في هذه الفئة",
+    "filterEmptyDescription": "جرب اختيار فئة مختلفة لعرض المشاريع.",
+    "showAllProjects": "عرض جميع المشاريع",
+    "noProjects": "لا توجد مشاريع",
+    "noProjectsDescription": "لا توجد مشاريع إنشائية متاحة في الوقت الحالي. يرجى المراجعة لاحقاً.",
+    "categories": {
+      "all": "جميع المشاريع",
+      "ready-construction": "البناء الجاهز",
+      "regular-construction": "البناء العادي"
+    },
+    "status": {
+      "planning": "التخطيط",
+      "in-progress": "قيد التنفيذ",
+      "completed": "مكتمل"
+    }
   },
   "product": {
     "buyNow": "اشتر الآن",

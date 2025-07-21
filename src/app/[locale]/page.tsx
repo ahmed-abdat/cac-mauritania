@@ -1,5 +1,6 @@
 import HeroContainer from '@/components/home/HeroContainer';
 import ServicesOverview from '@/components/home/ServicesOverview';
+import ConstructionProjectsShowcase from '@/components/home/ConstructionProjectsShowcase';
 import WhyChooseCAC from '@/components/home/WhyChooseCAC';
 import TrustedCompanies from '@/components/home/TrustedCompanies';
 import ContactCTA from '@/components/home/ContactCTA';
@@ -71,6 +72,7 @@ export default async function Home({
       
       <HeroContainer locale={typedLocale} />
       <ServicesOverview />
+      <ConstructionProjectsShowcase locale={typedLocale} />
       <WhyChooseCAC />
       <TrustedCompanies />
       <ContactCTA />

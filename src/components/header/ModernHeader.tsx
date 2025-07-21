@@ -22,8 +22,9 @@ const navigationGroups = [
     id: "construction",
     icon: Hammer,
     items: [
+      { title: "Construction", href: "/construction" },
       { title: "Ready Build", href: "/ready-construction" },
-      { title: "Construction", href: "/regular-construction" },
+      { title: "Regular Construction", href: "/regular-construction" },
     ]
   },
   {

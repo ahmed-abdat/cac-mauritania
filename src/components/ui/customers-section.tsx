@@ -1,5 +1,6 @@
 import React from "react"
 import { AnimatedGroup } from "@/components/ui/animated-group"
+import Image from "next/image"
 
 const transitionVariants = {
   item: {
@@ -52,12 +53,12 @@ export function CustomersSection({ customers = [], className }: CustomersSection
         >
           {customers.map((logo, index) => (
             <div key={index} className="flex items-center justify-center p-6">
-              <img
+              <Image
                 className="h-16 w-auto object-contain grayscale transition-all duration-300 hover:grayscale-0 hover:scale-110 dark:invert"
                 src={logo.src}
                 alt={logo.alt}
                 height={logo.height}
-                width="auto"
+                width={120}
               />
             </div>
           ))}

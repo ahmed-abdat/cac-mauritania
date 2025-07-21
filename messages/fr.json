@@ -41,7 +41,7 @@
   },
   "Navigation": {
     "Home": "Accueil",
-    "Construction": "Construction",
+    "Construction": "Projets de Construction",
     "Agriculture": "Agriculture",
     "About": "À propos",
     "Contact": "Contact",
@@ -51,6 +51,7 @@
     "Conference": "Conférence",
     "Charity": "Charité",
     "Ready Build": "Construction prête",
+    "Regular Construction": "Construction Régulière",
     "cacSubtitle": "Construction Contemporaine",
     "navigationGroups": {
       "construction": {
@@ -113,6 +114,41 @@
     "discover": "Découvrir",
     "area": "Superficie",
     "price": "Prix"
+  },
+  "ConstructionProjects": {
+    "title": "Nos Derniers Projets de Construction",
+    "subtitle": "Explorez nos projets de construction les plus récents mettant en valeur un savoir-faire de qualité et un design innovant.",
+    "keyFeatures": "Caractéristiques Clés",
+    "viewDetails": "Voir les Détails",
+    "viewProject": "Voir le Projet",
+    "viewAllProjects": "Voir Tous les Projets",
+    "showMore": "Voir Plus de Projets",
+    "images": "images",
+    "totalImages": "Total Images",
+    "projectDate": "Date du Projet",
+    "relatedProjects": "Projets Similaires",
+    "projectGallery": "Galerie du Projet",
+    "backToProjects": "Retour aux Projets",
+    "allProjectsTitle": "Tous les Projets de Construction",
+    "allProjectsDescription": "Explorez notre portefeuille complet de projets de construction mettant en valeur un savoir-faire de qualité et un design innovant dans les catégories de construction préfabriquée et traditionnelle.",
+    "totalProjects": "Projets",
+    "loadingMore": "Chargement...",
+    "allProjectsLoaded": "Tous les projets chargés",
+    "noProjectsInCategory": "Aucun projet trouvé dans cette catégorie",
+    "filterEmptyDescription": "Essayez de sélectionner une catégorie différente pour voir les projets.",
+    "showAllProjects": "Voir Tous les Projets",
+    "noProjects": "Aucun Projet Trouvé",
+    "noProjectsDescription": "Aucun projet de construction n'est disponible pour le moment. Veuillez revenir plus tard.",
+    "categories": {
+      "all": "Tous les Projets",
+      "ready-construction": "Construction Préfabriquée",
+      "regular-construction": "Construction Traditionnelle"
+    },
+    "status": {
+      "planning": "Planification",
+      "in-progress": "En Cours",
+      "completed": "Terminé"
+    }
   },
   "ready-construction": {
     "title": "Construction Préfabriquée",

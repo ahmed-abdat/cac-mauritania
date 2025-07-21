@@ -13,7 +13,7 @@ export default async function Hero({
   const t = await getTranslations("IndexPage");
 
   return (
-    <div className="w-full py-16 md:py-24 lg:py-32 bg-white dark:bg-slate-900">
+    <div className="w-full py-10 md:py-12 lg:py-16 bg-white dark:bg-slate-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 items-center lg:grid-cols-2 lg:gap-20">
           <div className="flex gap-6 flex-col">

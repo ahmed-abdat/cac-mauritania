@@ -41,7 +41,7 @@
   },
   "Navigation": {
     "Home": "Home",
-    "Construction": "Construction",
+    "Construction": "Construction Projects",
     "Agriculture": "Agriculture",
     "About": "About",
     "Contact": "Contact",
@@ -51,6 +51,7 @@
     "Conference": "Conference",
     "Charity": "Charity",
     "Ready Build": "Ready Build",
+    "Regular Construction": "Regular Construction",
     "cacSubtitle": "Contemporary Construction",
     "navigationGroups": {
       "construction": {
@@ -113,6 +114,41 @@
     "discover": "Discover",
     "area": "Area",
     "price": "Price"
+  },
+  "ConstructionProjects": {
+    "title": "Our Latest Construction Projects",
+    "subtitle": "Explore our most recent construction projects showcasing quality craftsmanship and innovative design.",
+    "keyFeatures": "Key Features",
+    "viewDetails": "View Details",
+    "viewProject": "View Project",
+    "viewAllProjects": "View All Projects",
+    "showMore": "Show More Projects",
+    "images": "images",
+    "totalImages": "Total Images",
+    "projectDate": "Project Date",
+    "relatedProjects": "Related Projects",
+    "projectGallery": "Project Gallery",
+    "backToProjects": "Back to Projects",
+    "allProjectsTitle": "All Construction Projects",
+    "allProjectsDescription": "Explore our complete portfolio of construction projects showcasing quality craftsmanship and innovative design across ready construction and regular construction categories.",
+    "totalProjects": "Projects",
+    "loadingMore": "Loading more...",
+    "allProjectsLoaded": "All projects loaded",
+    "noProjectsInCategory": "No projects found in this category",
+    "filterEmptyDescription": "Try selecting a different category to view projects.",
+    "showAllProjects": "Show All Projects",
+    "noProjects": "No Projects Found",
+    "noProjectsDescription": "No construction projects are available at the moment. Please check back later.",
+    "categories": {
+      "all": "All Projects",
+      "ready-construction": "Ready Construction",
+      "regular-construction": "Regular Construction"
+    },
+    "status": {
+      "planning": "Planning",
+      "in-progress": "In Progress",
+      "completed": "Completed"
+    }
   },
   "ready-construction": {
     "title": "Ready Construction",
