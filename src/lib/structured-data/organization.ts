@@ -16,7 +16,7 @@ export const organizationSchema = {
   "url": siteConfig.url,
   "logo": {
     "@type": "ImageObject",
-    "url": `${siteConfig.url}/logo.jpg`,
+    "url": `${siteConfig.url}/logo.webp`,
     "width": 200,
     "height": 200
   },

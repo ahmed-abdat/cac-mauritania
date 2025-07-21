@@ -132,7 +132,7 @@ export default async function HeroVariant8({ locale }: HeroVariant8Props) {
             <div className="relative">
               <div className="absolute inset-0 bg-primary-blue/10 rounded-3xl blur-3xl"></div>
               <Image
-                src="/hero.png"
+                src="/hero.webp"
                 alt="CAC Services Illustration"
                 width={2796}
                 height={2008}

@@ -23,7 +23,7 @@ const Footer: React.FC<{ locale: string }> = ({ locale }) => {
     <footer className="bg-primary-blue text-white py-8">
       <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between">
         <div className="md:w-1/3 mb-8 md:mb-0">
-          <Image src="/logo.jpg" alt="CAC Logo" width={80} height={80} />
+          <Image src="/logo.webp" alt="CAC Logo" width={80} height={80} />
           <p className="mt-4">
             CAC - مركز الريادة والاستشارات
             <br />

@@ -32,7 +32,7 @@ export default function Header({
           >
             <div className="bg-white shadow-lg p-2 rounded-xl">
               <Image
-                src="/logo.jpg"
+                src="/logo.webp"
                 width={40}
                 height={40}
                 alt="CAC Logo"

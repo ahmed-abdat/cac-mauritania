@@ -39,7 +39,7 @@ export default async function NotFound() {
               >
                 <span className="inline-block">
                   <Image
-                    src="/logo.jpg"
+                    src="/logo.webp"
                     width={120}
                     height={120}
                     alt="logo"

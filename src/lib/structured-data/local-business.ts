@@ -14,7 +14,7 @@ export const localBusinessSchema = {
     "Center for Entrepreneurship and Consulting"
   ],
   "image": [
-    `${siteConfig.url}/logo.jpg`,
+    `${siteConfig.url}/logo.webp`,
     `${siteConfig.url}/about.webp`,
     `${siteConfig.url}/og-image.jpeg`
   ],

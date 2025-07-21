@@ -97,7 +97,7 @@ export default async function HeroVariant4({ locale }: HeroVariant4Props) {
             <div className="relative rounded-3xl overflow-hidden shadow-lg bg-slate-100 dark:bg-slate-800">
               <div className="aspect-[4/3] relative">
                 <Image
-                  src="/hero.png"
+                  src="/hero.webp"
                   alt="CAC Services"
                   fill
                   className="object-cover"

@@ -190,7 +190,7 @@ export function ModernMobileNav({ locale }: ModernMobileNavProps) {
             >
               <div className="bg-white p-2 rounded-xl shadow-lg">
                 <Image
-                  src="/logo.jpg"
+                  src="/logo.webp"
                   alt="CAC Logo"
                   width={32}
                   height={32}

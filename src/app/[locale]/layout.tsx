@@ -143,11 +143,11 @@ export default async function RootLayout({
         <link 
           rel="preload" 
           as="image" 
-          href="/hero.png" 
+          href="/hero.webp" 
           imageSizes="(max-width: 768px) 100vw, 50vw"
-          imageSrcSet="/hero.png 800w, /hero.png 1200w"
+          imageSrcSet="/hero.webp 800w, /hero.webp 1200w"
         />
-        <link rel="preload" as="image" href="/logo.jpg" />
+        <link rel="preload" as="image" href="/logo.webp" />
         <link rel="preload" as="image" href="/og-image.jpeg" />
       </head>
       <body

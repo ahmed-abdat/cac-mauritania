@@ -60,7 +60,7 @@ export async function sendEmail(formData: {
     html: htmlBody,
     attachments: [
       {
-        filename: "logo.jpg",
+        filename: "logo.webp",
         path: `${publicUrl}`,
         cid: "logo", // same cid value as in the html img src
       },

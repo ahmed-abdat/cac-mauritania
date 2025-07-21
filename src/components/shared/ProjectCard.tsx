@@ -76,7 +76,7 @@ export function ProjectCard({
         {/* Project Image */}
         <div className={`relative ${getCardHeight()} overflow-hidden rounded-t-xl sm:rounded-t-2xl`}>
           <Image
-            src={project.images[0]?.url || '/hero.png'}
+            src={project.images[0]?.url || '/hero.webp'}
             alt={project.title[locale as keyof typeof project.title]}
             fill
             className="object-cover transition-transform duration-500 group-hover:scale-110"
