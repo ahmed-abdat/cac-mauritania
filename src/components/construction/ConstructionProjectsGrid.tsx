@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { Building, Grid3x3, RefreshCw, AlertCircle, FolderOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 import { getConstructionProjects, ConstructionProjectDisplay } from '@/services/construction-service';
 import { Locale } from '@/i18n/routing';
 import { useInView } from 'react-intersection-observer';
@@ -250,31 +251,58 @@ export function ConstructionProjectsGrid({ locale }: ConstructionProjectsGridPro
               defaultValue: 'Explore our complete portfolio of construction projects showcasing quality craftsmanship and innovative design.' 
             })}
           </p>
-          <div className="flex items-center justify-center gap-2 text-gray-600 dark:text-gray-400 mb-6">
-            <Grid3x3 className="h-5 w-5" />
-            <span className="font-medium">
-              {projectStats.total} {t('totalProjects', { defaultValue: 'Projects' })} • 
-              {projectStats.ready} {t('categories.ready-construction')} • 
-              {projectStats.regular} {t('categories.regular-construction')}
-            </span>
-          </div>
         </div>
 
         {/* Category Filters */}
-        <div className="flex overflow-x-auto justify-center gap-3 mb-8 pb-2 md:flex-wrap md:overflow-visible">
-          {(['all', 'ready-construction', 'regular-construction'] as const).map((category) => (
-            <Button
-              key={category}
-              variant={categoryFilter === category ? 'default' : 'outline'}
-              onClick={() => setCategoryFilter(category)}
-              className="px-6 py-2 flex-shrink-0"
-            >
-              {t(`categories.${category}`, {
-                defaultValue: category === 'all' ? 'All Projects' : 
-                  category === 'ready-construction' ? 'Ready Construction' : 'Regular Construction'
+        <div className="mb-8">
+          <ScrollArea className="w-full">
+            <div className="flex justify-center gap-3 pb-4 md:flex-wrap">
+              {(['all', 'ready-construction', 'regular-construction'] as const).map((category) => {
+                const isActive = categoryFilter === category;
+                const categoryCount = category === 'all' 
+                  ? projectStats.total 
+                  : category === 'ready-construction' 
+                    ? projectStats.ready 
+                    : projectStats.regular;
+                
+                return (
+                  <Button
+                    key={category}
+                    variant={isActive ? 'default' : 'outline'}
+                    onClick={() => setCategoryFilter(category)}
+                    className={`
+                      px-4 py-2 flex-shrink-0 flex items-center gap-2 min-w-fit whitespace-nowrap
+                      ${isActive 
+                        ? 'bg-blue-600 hover:bg-blue-700 text-white border-blue-600' 
+                        : 'bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600'
+                      }
+                    `}
+                  >
+                    <span>
+                      {t(`categories.${category}`, {
+                        defaultValue: category === 'all' ? 'All Projects' : 
+                          category === 'ready-construction' ? 'Ready Construction' : 'Regular Construction'
+                      })}
+                    </span>
+                    <span className={`
+                      text-xs px-2 py-0.5 rounded-full font-medium
+                      ${isActive 
+                        ? 'bg-blue-500 text-white' 
+                        : category === 'ready-construction'
+                          ? 'bg-purple-100 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400'
+                          : category === 'regular-construction'
+                            ? 'bg-orange-100 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400'
+                            : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400'
+                      }
+                    `}>
+                      {categoryCount}
+                    </span>
+                  </Button>
+                );
               })}
-            </Button>
-          ))}
+            </div>
+            <ScrollBar orientation="horizontal" className="md:hidden" />
+          </ScrollArea>
         </div>
 
         {/* Projects Grid */}
