@@ -15,19 +15,18 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { 
-  Menu, 
-  ArrowRight, 
-  ArrowLeft, 
-  Building, 
-  Zap, 
-  Sprout, 
-  Heart, 
-  Users, 
-  MessageSquare,
+import {
+  Menu,
+  ArrowRight,
+  ArrowLeft,
+  Building,
+  Zap,
+  Sprout,
+  Heart,
+  Users,
+  Headphones,
   Home,
   Info,
-  Phone
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -35,6 +34,8 @@ import { useTranslations } from "next-intl";
 import { Image } from "@/components/ui/image";
 import { useState } from "react";
 import LocalSwitcher from "./local-switcher";
+import { StarBorder } from "@/components/ui/star-border";
+import { cn } from "@/lib/utils";
 
 // Same navigation structure as desktop
 const navigationGroups = [
@@ -45,16 +46,16 @@ const navigationGroups = [
       { title: "Construction", href: "/construction" },
       { title: "Ready Build", href: "/ready-construction" },
       { title: "Regular Construction", href: "/regular-construction" },
-    ]
+    ],
   },
   {
-    id: "sustainability", 
+    id: "sustainability",
     icon: Zap,
     items: [
       { title: "Energy", href: "/renewable-energy" },
       { title: "Agriculture", href: "/agriculture" },
       { title: "Livestock", href: "/animal-development" },
-    ]
+    ],
   },
   {
     id: "business",
@@ -63,8 +64,8 @@ const navigationGroups = [
       { title: "Entrepreneurship", href: "/entrepreneurship-center" },
       { title: "Conference", href: "/conference-hall" },
       { title: "Charity", href: "/charitable-interventions" },
-    ]
-  }
+    ],
+  },
 ];
 
 interface ModernMobileNavProps {
@@ -83,7 +84,7 @@ export function ModernMobileNav({ locale }: ModernMobileNavProps) {
     return t(`navigationGroups.${groupId}.title`);
   };
 
-  const renderMobileGroup = (group: typeof navigationGroups[0]) => {
+  const renderMobileGroup = (group: (typeof navigationGroups)[0]) => {
     const groupTitle = getGroupTitle(group.id);
 
     return (
@@ -133,9 +134,7 @@ export function ModernMobileNav({ locale }: ModernMobileNavProps) {
           className="lg:hidden text-gray-900 hover:bg-gray-100 hover:text-primary-blue transition-all duration-200 border border-gray-300 hover:border-primary-blue/50 shadow-sm"
         >
           <Menu className="w-4 h-4" />
-          <span className="sr-only">
-            {t("openMenu")}
-          </span>
+          <span className="sr-only">{t("openMenu")}</span>
         </Button>
       </SheetTrigger>
       <SheetContent
@@ -149,7 +148,7 @@ export function ModernMobileNav({ locale }: ModernMobileNavProps) {
               className="flex items-center gap-3 text-gray-900"
               onClick={closeSheet}
             >
-              <div className="bg-white p-2 rounded-xl shadow-lg border border-gray-200">
+              <div className="bg-white p-2 rounded-xl shadow-lg">
                 <Image
                   src="/logo.jpg"
                   alt="CAC Logo"
@@ -207,7 +206,6 @@ export function ModernMobileNav({ locale }: ModernMobileNavProps) {
                 <Info className="w-4 h-4 text-primary-blue" />
                 <span>{t("About")}</span>
               </Link>
-
             </nav>
           </div>
         </div>
@@ -224,21 +222,24 @@ export function ModernMobileNav({ locale }: ModernMobileNavProps) {
 
         {/* Contact CTA Section */}
         <div className="border-t border-primary-blue/10 p-6 space-y-4 bg-gradient-to-r from-primary-blue/5 to-primary-lightBlue/5">
-          <Button
-            className="w-full bg-primary-blue hover:bg-primary-lightBlue text-white shadow-md hover:shadow-lg transition-all duration-200"
-            asChild
+          <StarBorder
+            as={Link}
+            href={`/${locale}/contact`}
+            color="#1A4FE6"
+            speed="4s"
+            className="text-sm h-10 flex items-center justify-center hover:scale-105 transition-transform duration-200 w-full"
+            onClick={closeSheet}
           >
-            <Link href={`/${locale}/contact`} onClick={closeSheet}>
-              <MessageSquare className="w-4 h-4 mr-2" />
+            <div
+              className={cn(
+                "flex items-center gap-2 text-sm font-medium text-gray-900 hover:text-primary-blue transition-colors duration-200",
+                pathname === `/${locale}/contact` && "text-primary-blue"
+              )}
+            >
+              <Headphones className="w-4 h-4" />
               {t("contactUs")}
-            </Link>
-          </Button>
-          
-          <div className="text-center">
-            <p className="text-xs text-gray-600">
-              {t("phone")}
-            </p>
-          </div>
+            </div>
+          </StarBorder>
         </div>
       </SheetContent>
     </Sheet>

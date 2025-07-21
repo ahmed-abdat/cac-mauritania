@@ -261,13 +261,13 @@ export function ConstructionProjectsGrid({ locale }: ConstructionProjectsGridPro
         </div>
 
         {/* Category Filters */}
-        <div className="flex flex-wrap justify-center gap-3 mb-8">
+        <div className="flex overflow-x-auto justify-center gap-3 mb-8 pb-2 md:flex-wrap md:overflow-visible">
           {(['all', 'ready-construction', 'regular-construction'] as const).map((category) => (
             <Button
               key={category}
               variant={categoryFilter === category ? 'default' : 'outline'}
               onClick={() => setCategoryFilter(category)}
-              className="px-6 py-2"
+              className="px-6 py-2 flex-shrink-0"
             >
               {t(`categories.${category}`, {
                 defaultValue: category === 'all' ? 'All Projects' : 

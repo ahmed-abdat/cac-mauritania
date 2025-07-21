@@ -1,9 +1,10 @@
 import React from "react";
-import { MoveRight, PhoneCall } from "lucide-react";
+import { MoveRight, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { getTranslations } from "next-intl/server";
 import { Locale } from "@/i18n/routing";
 import { Image } from "@/components/ui/image";
+import Link from "next/link";
 
 export default async function Hero({
   locale,
@@ -42,21 +43,25 @@ export default async function Hero({
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
-                className="gap-4 bg-primary hover:bg-primary/90 text-white shadow-lg hover:shadow-xl hover:translate-y-[-2px] transition-all duration-300 px-8 py-4"
-              >
-                {t("callNow")}
-                <PhoneCall className="w-5 h-5" />
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline"
-                className="gap-4 border-2 border-primary/20 hover:border-primary/40 hover:bg-primary/5 hover:translate-y-[-2px] transition-all duration-300 px-8 py-4"
-              >
-                {t("CTA")}
-                <MoveRight className={locale === "ar" ? "w-5 h-5 rotate-180" : "w-5 h-5"} />
-              </Button>
+              <Link href={`/${locale}/contact`}>
+                <Button 
+                  size="lg" 
+                  className="w-full gap-4 bg-primary hover:bg-primary/90 text-white shadow-lg hover:shadow-xl hover:translate-y-[-2px] transition-all duration-300 px-8 py-4"
+                >
+                  {t("contactUs")}
+                  <Mail className="w-5 h-5" />
+                </Button>
+              </Link>
+              <Link href={`/${locale}/about`}>
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  className="w-full gap-4 border-2 border-primary/20 hover:border-primary/40 hover:bg-primary/5 hover:translate-y-[-2px] transition-all duration-300 px-8 py-4"
+                >
+                  {t("CTA")}
+                  <MoveRight className={locale === "ar" ? "w-5 h-5 rotate-180" : "w-5 h-5"} />
+                </Button>
+              </Link>
             </div>
 
           </div>

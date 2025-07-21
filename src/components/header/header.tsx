@@ -17,7 +17,9 @@ export default function Header({
   const isRTL = locale === "ar";
 
   return (
-    <nav className={`sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-gray-200/50 shadow-lg transition-all duration-300 ${className}`}>
+    <nav
+      className={`sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-gray-200/50 shadow-lg transition-all duration-300 ${className}`}
+    >
       <div className="px-4 lg:px-8 py-3">
         <div className="flex items-center justify-between max-w-7xl mx-auto">
           {/* Logo */}
@@ -27,7 +29,7 @@ export default function Header({
             title="Return to CAC Homepage"
             className="flex items-center gap-3 hover:opacity-90 transition-opacity"
           >
-            <div className="bg-white shadow-lg p-2 rounded-xl border border-gray-200">
+            <div className="bg-white shadow-lg p-2 rounded-xl">
               <Image
                 src="/logo.jpg"
                 width={40}
@@ -61,7 +63,9 @@ export default function Header({
                 title="Call Our Customer Support"
                 className="flex items-center gap-2"
               >
-                <Phone className={`w-4 h-4 ${isRTL ? "order-last" : "order-first"}`} />
+                <Phone
+                  className={`w-4 h-4 ${isRTL ? "order-last" : "order-first"}`}
+                />
                 <span className="hidden sm:inline">{topNav("CallUs")}</span>
               </Link>
             </Button>
