@@ -1,14 +1,15 @@
 {
   "IndexPage": {
-    "title": "Construction Artistique Contemporaine",
-    "subtitle": "CAC - Construire l'Avenir",
-    "description": "Une entreprise multidisciplinaire spécialisée dans la construction, le développement, les solutions et les services. Nous nous efforçons de fournir des solutions intégrées qui suivent le rythme du développement et répondent aux besoins du marché local et international avec efficacité et haute qualité.",
-    "CTA": "En savoir plus",
-    "trustedCompaniesHeading": "ILS NOUS FONT CONFIANCE",
-    "trustedBadge": "Partenaires de Confiance",
-    "trustedCompaniesSubheading": "Autonomiser les entreprises dans tous les secteurs avec des solutions innovantes",
+    "title": "Construire l'Avenir de la Mauritanie par l'Innovation",
+    "subtitle": "8+ Services Spécialisés • Approuvé par de Grandes Entreprises • Garantie Qualité 100%",
+    "description": "Construction Artistique Contemporaine CAC - Votre partenaire global en construction, énergie renouvelable, agriculture et entrepreneuriat. Solutions intégrées de la vision à la réalisation, avec expertise locale et standards internationaux.",
+    "CTA": "Notre Histoire",
+    "contactUs": "Nous Contacter",
+    "trustedCompaniesHeading": "Approuvé par les Principales Entreprises de Mauritanie",
+    "trustedBadge": "Partenaires de Succès",
+    "trustedCompaniesSubheading": "SOMELEC • SNIM • Gendarmerie Nationale • Ministères • Grandes Institutions",
     "callNow": "Appelez-nous",
-    "heroServices": "Construction • Énergie Renouvelable • Agriculture • Conférences • Conseil"
+    "heroServices": "Construction Prête & Classique • Énergie Renouvelable • Agriculture Moderne • Centre d'Entrepreneuriat • Salle de Conférence"
   },
   "Features": {
     "sectionTitle": "Nos Services Distingués",
@@ -252,8 +253,12 @@
     "CompanyType": "Type: Entreprise multidisciplinaire dans la construction, le développement, les solutions et les services",
     "CompanyLocation": "Localisation: Rue Sheikh Zayed / Tevragh Zeina",
     "CompanyContact": "Téléphone: 42420762 / 42420760 | Email: cacanktt@gmail.com",
-    "CompanyVision": "Notre Vision: Nous nous efforçons d'être des pionniers dans la fourniture de solutions complètes et intégrées dans la construction, l'énergie et le développement durable, basées sur l'innovation et la connaissance pour servir la communauté et réaliser un développement global.",
-    "CompanyMission": "Notre Mission: Nous fournissons des services spécialisés et intégrés selon les plus hauts standards de qualité et de professionnalisme, combinant l'expérience pratique avec une vision future pour soutenir l'infrastructure et le développement économique et social.",
+    "CompanyInformation": "Informations de l'Entreprise",
+    "CompanyTypeLabel": "Type",
+    "VisionHeader": "Notre Vision",
+    "MissionHeader": "Notre Mission",
+    "CompanyVision": "Nous nous efforçons d'être des pionniers dans la fourniture de solutions complètes et intégrées dans la construction, l'énergie et le développement durable, basées sur l'innovation et la connaissance pour servir la communauté et réaliser un développement global.",
+    "CompanyMission": "Nous fournissons des services spécialisés et intégrés selon les plus hauts standards de qualité et de professionnalisme, combinant l'expérience pratique avec une vision future pour soutenir l'infrastructure et le développement économique et social.",
     "ExperienceDescription": "Nous sommes une entreprise spécialisée multidisciplinaire, cherchant à fournir des solutions intégrées qui suivent le rythme du développement et répondent aux besoins du marché local et international de manière efficace et avec une haute qualité, grâce à une équipe de travail professionnelle et une vaste expérience scientifique.",
     "CoreServices": "Spécialisations de l'Entreprise",
     "Service1Title": "Construction Régulière et Prête",

@@ -1,14 +1,15 @@
 {
   "IndexPage": {
-    "title": "Contemporary Artistic Construction",
-    "subtitle": "CAC - Building the Future",
-    "description": "A multidisciplinary company specializing in construction, development, solutions, and services. We strive to provide integrated solutions that keep pace with development and meet local and international market needs with efficiency and high quality.",
-    "CTA": "Learn more",
-    "trustedCompaniesHeading": "THEY TRUST US",
-    "trustedBadge": "Trusted Partners",
-    "trustedCompaniesSubheading": "Empowering businesses across industries with innovative solutions",
+    "title": "Building Mauritania's Future with Innovation",
+    "subtitle": "8+ Specialized Services • Trusted by Major Companies • 100% Quality Guarantee",
+    "description": "Contemporary Artistic Construction CAC - Your comprehensive partner in construction, renewable energy, agriculture, and entrepreneurship. Integrated solutions from vision to reality, with local expertise and international standards.",
+    "CTA": "Our Story",
+    "contactUs": "Contact Us",
+    "trustedCompaniesHeading": "Trusted by Mauritania's Leading Companies",
+    "trustedBadge": "Success Partners",
+    "trustedCompaniesSubheading": "SOMELEC • SNIM • National Gendarmerie • Government Ministries • Major Institutions",
     "callNow": "Call us now",
-    "heroServices": "Construction • Renewable Energy • Agriculture • Conferences • Consulting"
+    "heroServices": "Ready & Regular Construction • Renewable Energy • Modern Agriculture • Entrepreneurship Center • Conference Hall"
   },
   "Features": {
     "sectionTitle": "Our Distinguished Services",
@@ -217,8 +218,12 @@
     "CompanyType": "Type: Multidisciplinary company in construction, development, solutions, and services",
     "CompanyLocation": "Location: Sheikh Zayed Street / Tevragh Zeina",
     "CompanyContact": "Phone: 42420762 / 42420760 | Email: cacanktt@gmail.com",
-    "CompanyVision": "Our Vision: We strive to be pioneers in providing comprehensive and integrated solutions in construction, energy, and sustainable development, based on innovation and knowledge to serve the community and achieve comprehensive development.",
-    "CompanyMission": "Our Mission: We provide specialized and integrated services with the highest quality and professionalism standards, combining practical experience with future vision to support infrastructure and economic and social development.",
+    "CompanyInformation": "Company Information",
+    "CompanyTypeLabel": "Type",
+    "VisionHeader": "Our Vision",
+    "MissionHeader": "Our Mission",
+    "CompanyVision": "We strive to be pioneers in providing comprehensive and integrated solutions in construction, energy, and sustainable development, based on innovation and knowledge to serve the community and achieve comprehensive development.",
+    "CompanyMission": "We provide specialized and integrated services with the highest quality and professionalism standards, combining practical experience with future vision to support infrastructure and economic and social development.",
     "ExperienceDescription": "We are a specialized multidisciplinary company, seeking to provide integrated solutions that keep pace with development and meet the needs of the local and international market efficiently and with high quality, through a professional work team and extensive scientific experience.",
     "CoreServices": "Company Specializations",
     "Service1Title": "Regular and Ready Construction",
