@@ -255,7 +255,7 @@ export function ConstructionProjectsGrid({ locale }: ConstructionProjectsGridPro
 
         {/* Category Filters */}
         <div className="mb-8">
-          <ScrollArea className="w-full">
+          <ScrollArea className="w-full" dir={locale === 'ar' ? 'rtl' : 'ltr'}>
             <div className="flex justify-center gap-3 pb-4 md:flex-wrap">
               {(['all', 'ready-construction', 'regular-construction'] as const).map((category) => {
                 const isActive = categoryFilter === category;
