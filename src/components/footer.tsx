@@ -3,6 +3,7 @@ import { Image } from "@/components/ui/image";
 import LocalSwitcher from "@/components/header/local-switcher";
 import { useTranslations } from "next-intl";
 import DockDemo from "./Docke";
+import { CONTACT_INFO } from "@/constats/contact-info";
 import Link from "next/link";
 import { MapPin } from "lucide-react";
 
@@ -47,7 +48,7 @@ const Footer: React.FC<{ locale: string }> = ({ locale }) => {
         <div className="md:w-1/3 mb-8 md:mb-0">
           <h2 className="text-lg font-semibold mb-4">{t("contactUs")}</h2>
           <p>
-            <span>{t("phone")}: </span>00222-42022255
+            <span>{t("phone")}: </span>{CONTACT_INFO.PRIMARY_PHONE_FULL}
             <br />
             <span>{t("mobile")}: </span>00222-42022244
             <br />

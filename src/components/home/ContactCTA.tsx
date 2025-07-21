@@ -13,6 +13,7 @@ import {
 import { WhatsAppIcon } from '@/components/ui/icons/WhatsAppIcon';
 import { useLocale, useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import { CONTACT_INFO } from "@/constats/contact-info";
 import Link from "next/link";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { cn } from "@/lib/utils";
@@ -29,8 +30,8 @@ const ContactCTA = () => {
       bgColor: "bg-green-50",
       titleKey: "phone.title",
       descriptionKey: "phone.description",
-      action: "tel:+22242420762",
-      actionText: "+222 42 42 07 62",
+      action: `tel:${CONTACT_INFO.PRIMARY_PHONE_FULL}`,
+      actionText: CONTACT_INFO.PRIMARY_PHONE_FULL,
     },
     {
       icon: WhatsAppIcon,
@@ -38,8 +39,8 @@ const ContactCTA = () => {
       bgColor: "bg-green-50",
       titleKey: "whatsapp.title",
       descriptionKey: "whatsapp.description",
-      action: "https://wa.me/22242420760",
-      actionText: "+222 42 42 07 60",
+      action: `https://wa.me/${CONTACT_INFO.WHATSAPP_NUMBER}`,
+      actionText: CONTACT_INFO.PRIMARY_PHONE_FULL,
     },
     {
       icon: Mail,

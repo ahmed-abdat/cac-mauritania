@@ -3,6 +3,7 @@
 import React from "react";
 import { Image } from "@/components/ui/image";
 import { useTranslations, useLocale } from "next-intl";
+import { CONTACT_INFO } from "@/constats/contact-info";
 import ShineBorder from "@/components/magicui/shine-border";
 import { motion } from "framer-motion";
 import { Building2, MapPin, Users, Award, Shield, Lightbulb, Recycle, HandHeart, Wrench, Sun, Wheat, Presentation, Cog } from "lucide-react";
@@ -466,11 +467,11 @@ export default function AboutUs() {
               <div className="space-y-3 text-gray-700">
                 <p>
                   <span className="font-medium">{footerT("phone")}: </span>
-                  <span dir="ltr">+222 42 42 07 62</span>
+                  <span dir="ltr">{CONTACT_INFO.PRIMARY_PHONE_FULL}</span>
                 </p>
                 <p>
                   <span className="font-medium">{footerT("mobile")}: </span>
-                  <span dir="ltr">+222 42 42 07 60</span>
+                  <span dir="ltr">{CONTACT_INFO.SECONDARY_PHONE_FULL}</span>
                 </p>
                 <p>
                   <span className="font-medium">{footerT("email")}: </span>

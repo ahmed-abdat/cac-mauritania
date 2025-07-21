@@ -73,7 +73,7 @@ export default function DockDemo({ className }: { className?: string }) {
         </DockIcon>
         <DockIcon className="bg-black/10 dark:bg-white/10 p-3">
           <Link
-            href="https://wa.me/message/FEYUI7YQ4WR5F1"
+            href={`https://wa.me/${CONTACT_INFO.WHATSAPP_NUMBER}`}
             aria-label="whatsapp"
             target="_blank"
             rel="noopener noreferrer"

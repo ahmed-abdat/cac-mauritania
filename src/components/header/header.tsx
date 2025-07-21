@@ -5,6 +5,7 @@ import { ModernHeader } from "./ModernHeader";
 import { ModernMobileNav } from "./ModernMobileNav";
 import { Button } from "../ui/button";
 import { Phone } from "lucide-react";
+import { CONTACT_INFO } from "@/constats/contact-info";
 
 export default function Header({
   locale,
@@ -58,7 +59,7 @@ export default function Header({
               asChild
             >
               <Link
-                href="tel:+22242022255"
+                href={`tel:${CONTACT_INFO.PRIMARY_PHONE_FULL}`}
                 aria-label="Call CAC Customer Support"
                 title="Call Our Customer Support"
                 className="flex items-center gap-2"
