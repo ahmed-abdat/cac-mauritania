@@ -2,14 +2,16 @@
   "IndexPage": {
     "title": "Construire l'Avenir de la Mauritanie par l'Innovation",
     "subtitle": "8+ Services Spécialisés • Approuvé par de Grandes Entreprises • Garantie Qualité 100%",
-    "description": "Construction Artistique Contemporaine CAC - Votre partenaire global en construction, énergie renouvelable, agriculture et entrepreneuriat. Solutions intégrées de la vision à la réalisation, avec expertise locale et standards internationaux.",
+    "description": "Votre partenaire de confiance en construction prête, énergie renouvelable, agriculture et entrepreneuriat. Avec 8+ services spécialisés et garantie qualité 100%, nous concrétisons votre vision avec expertise locale et standards internationaux.",
     "CTA": "Notre Histoire",
     "contactUs": "Nous Contacter",
     "trustedCompaniesHeading": "Approuvé par les Principales Entreprises de Mauritanie",
     "trustedBadge": "Partenaires de Succès",
     "trustedCompaniesSubheading": "SOMELEC • SNIM • Gendarmerie Nationale • Ministères • Grandes Institutions",
     "callNow": "Appelez-nous",
-    "heroServices": "Construction Prête & Classique • Énergie Renouvelable • Agriculture Moderne • Centre d'Entrepreneuriat • Salle de Conférence"
+    "heroServices": "Construction Prête & Classique • Énergie Renouvelable • Agriculture Moderne • Centre d'Entrepreneuriat • Salle de Conférence",
+    "subtitleMobile": "8+ Services • Qualité 100%",
+    "descriptionMobile": "CAC - Votre partenaire global en construction, énergie renouvelable, agriculture et entrepreneuriat."
   },
   "Features": {
     "sectionTitle": "Nos Services Distingués",
