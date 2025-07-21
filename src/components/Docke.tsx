@@ -2,6 +2,7 @@ import React from "react";
 
 import { Dock, DockIcon } from "@/components/magicui/dock";
 import Link from "next/link";
+import { CONTACT_INFO } from "@/constats/contact-info";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
