@@ -48,11 +48,9 @@ const Footer: React.FC<{ locale: string }> = ({ locale }) => {
         <div className="md:w-1/3 mb-8 md:mb-0">
           <h2 className="text-lg font-semibold mb-4">{t("contactUs")}</h2>
           <p>
-            <span>{t("phone")}: </span>{CONTACT_INFO.PRIMARY_PHONE_FULL}
+            <span>{t("phone")}: </span><span dir="ltr">{CONTACT_INFO.PRIMARY_PHONE_FULL}</span>
             <br />
-            <span>{t("mobile")}: </span>00222-42022244
-            <br />
-            <span>{t("email")}: </span>info@cacmauritanie.mr
+            <span>{t("email")}: </span>{CONTACT_INFO.EMAIL}
           </p>
         </div>
         <div className="md:w-1/3 mb-8 md:mb-0">

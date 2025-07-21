@@ -48,8 +48,8 @@ const ContactCTA = () => {
       bgColor: "bg-purple-50",
       titleKey: "email.title",
       descriptionKey: "email.description",
-      action: "mailto:cacanktt@gmail.com",
-      actionText: "cacanktt@gmail.com",
+      action: `mailto:${CONTACT_INFO.EMAIL}`,
+      actionText: CONTACT_INFO.EMAIL,
     },
     {
       icon: MapPin,
@@ -151,7 +151,9 @@ const ContactCTA = () => {
                       }
                       className="inline-flex items-center justify-center w-full px-3 py-2 rounded-lg font-medium text-white bg-primary hover:bg-primary/90 transition-colors duration-200 text-sm"
                     >
-                      {method.actionText}
+                      <span dir={method.actionText.startsWith('+') ? 'ltr' : undefined}>
+                        {method.actionText}
+                      </span>
                     </Link>
                   </div>
                 </div>
