@@ -1,4 +1,5 @@
 import { siteConfig } from '@/config/site';
+import { CONTACT_INFO } from '@/constats/contact-info';
 
 /**
  * LocalBusiness Schema for CAC
@@ -28,9 +29,9 @@ export const localBusinessSchema = {
     "addressCountry": "MR"
   },
   "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 18.0735,
-    "longitude": -15.9582
+    "@type": "GeoCoordinates", 
+    "latitude": 18.1190586090088,
+    "longitude": -16.0007514953613
   },
   "areaServed": [
     {
@@ -49,10 +50,14 @@ export const localBusinessSchema = {
   "priceRange": "$$",
   "currenciesAccepted": "MRU",
   "paymentAccepted": ["Cash", "Bank Transfer"],
-  "openingHours": "Mo-Fr 08:00-17:00",
+  "openingHours": "Mo-Sa 08:00-18:00",
+  "telephone": CONTACT_INFO.PRIMARY_PHONE_FULL,
+  "email": CONTACT_INFO.EMAIL,
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "customer service",
+    "telephone": CONTACT_INFO.PRIMARY_PHONE_FULL,
+    "email": CONTACT_INFO.EMAIL,
     "availableLanguage": ["Arabic", "French", "English"],
     "areaServed": "MR"
   },
