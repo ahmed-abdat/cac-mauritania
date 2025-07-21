@@ -94,11 +94,9 @@ export const getPromo = async (
         image: data.image,
       };
     } else {
-      console.log("No such document!");
       return null;
     }
   } catch (error) {
-    console.log(error);
     return null;
   }
 };
@@ -123,7 +121,6 @@ export const fetchPromos = async (promoCollection: string = "promos") => {
     });
     return promos;
   } catch (error) {
-    console.log(error);
     return [];
   }
 };
@@ -136,11 +133,9 @@ export const getPresentationImages = async (categoryId: string) => {
       const data = docSnap.data() as Presentation;
       return data.media;
     } else {
-      console.log("No such document!");
       return [];
     }
   } catch (error) {
-    console.log(error);
     return [];
   }
 };
@@ -153,11 +148,9 @@ export const getGalaryMedia = async (categoryId: string) => {
       const data = docSnap.data() as Presentation;
       return data.media;
     } else {
-      console.log("No such document!");
       return [];
     }
   } catch (error) {
-    console.log(error);
     return [];
   }
 };
@@ -196,11 +189,9 @@ export const getMarketPlaceProduct = async (
         docSnap,
       };
     } else {
-      console.log("No such document!");
       return { product: null };
     }
   } catch (error) {
-    console.log(error);
     return { product: null };
   }
 };
@@ -264,7 +255,6 @@ export const fetchMoreMarketPlaceProducts = async (
   collectionName: string,
   lastDocId: string | null
 ) => {
-  console.log("Fetching more marketplace products");
   const numberOfProductsToFetch = 10;
   let id: string | null = lastDocId;
   if (!lastDocId) return { otherPostes: [], id: null };
@@ -347,11 +337,9 @@ export const getHealthProduct = async (
         docSnap,
       };
     } else {
-      console.log("No such document!");
       return { product: null };
     }
   } catch (error) {
-    console.log(error);
     return { product: null };
   }
 };
@@ -402,7 +390,6 @@ export const getHealthProducts = async (
     const lastDocId = snapshot.docs[snapshot.docs.length - 1].id;
     return { products, lastDocId };
   } catch (error) {
-    console.log(error);
     return { products: [], lastDoc: null };
   }
 };
@@ -411,7 +398,6 @@ export const fetchMoreHealthProducts = async (
   categoryId: string,
   lastDocId: string | null
 ) => {
-  console.log("fetchMorePostes");
   const numberOfproductToFetch = 10;
   let id: string | null = lastDocId;
   if (!lastDocId) return { otherPostes: [], id: null };
@@ -457,7 +443,6 @@ export const fetchMoreHealthProducts = async (
     }
     return { otherPostes: products, id };
   } catch (error) {
-    console.log(error);
     return { otherPostes: [], id: null };
   }
 };

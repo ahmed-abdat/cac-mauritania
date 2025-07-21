@@ -253,7 +253,7 @@
     "PresentationduGroupeCAC": "Présentation de Contemporary Artistic Construction - CAC",
     "CenterforEntrepreneurship": "Contemporary Artistic Construction (CAC) est une entreprise multidisciplinaire spécialisée dans la construction, le développement, les solutions et les services, axée sur la santé publique et l'éducation authentique.",
     "CompanyType": "Type: Entreprise multidisciplinaire dans la construction, le développement, les solutions et les services",
-    "CompanyLocation": "Localisation: Rue Sheikh Zayed / Tevragh Zeina",
+    "CompanyLocation": "Localisation: Tevragh Zeina Rue Sheikh Zayed Nouakchott",
     "CompanyContact": "Téléphone: 42420762 / 42420760 | Email: cacanktt@gmail.com",
     "CompanyInformation": "Informations de l'Entreprise",
     "CompanyTypeLabel": "Type",
@@ -340,7 +340,7 @@
     "submit": "Envoyer",
     "getInTouch": "Contactez-nous",
     "visitUs": "Venez nous voir",
-    "visitDescription": "Notre emplacement est Rue Sheikh Zayed / Tevragh Zeina",
+    "visitDescription": "Notre emplacement est Tevragh Zeina Rue Sheikh Zayed Nouakchott",
     "chatToUs": "Parlez-nous",
     "chatDescription": "Notre équipe sympathique est là pour vous aider.\ncacanktt@gmail.com",
     "callUs": "Appelez-nous",
@@ -390,7 +390,7 @@
     }
   },
   "Footer": {
-    "location": "Rue Sheikh Zayed / Tevragh Zeina, Nouakchott, Mauritanie",
+    "location": "Tevragh Zeina Rue Sheikh Zayed Nouakchott, Mauritanie",
     "contactUs": "Contactez-nous",
     "phone": "Téléphone",
     "mobile": "Portable",
@@ -573,7 +573,7 @@
     "location": {
       "title": "Visitez Notre Bureau",
       "description": "Rencontrez notre équipe en personne pour des discussions détaillées et planification de projet.",
-      "address": "Rue Sheikh Zayed / Tevragh Zeina"
+      "address": "Tevragh Zeina Rue Sheikh Zayed Nouakchott"
     },
     "mainCTA": {
       "title": "Prêt à Transformer Votre Vision en Réalité ?",

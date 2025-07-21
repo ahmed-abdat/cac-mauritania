@@ -7,7 +7,7 @@ import { ArrowLeft, ArrowRight, Calendar, Building, Grid3x3, Eye, Play, ImageIco
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
-import { ConstructionProjectDisplay, getRelatedConstructionProjects } from '@/services/construction-service';
+import { ConstructionProjectDisplay, getRelatedConstructionProjects, getConstructionProjects } from '@/services/construction-service';
 import { Locale } from '@/i18n/routing';
 import { useInView } from 'react-intersection-observer';
 import { MediaPreviewModal } from '@/components/media/MediaPreviewModal';
@@ -30,6 +30,7 @@ export function ConstructionProjectDetails({ project, locale }: ConstructionProj
   
   const [relatedProjects, setRelatedProjects] = useState<ConstructionProjectDisplay[]>([]);
   const [loadingRelated, setLoadingRelated] = useState(true);
+  const [hasOtherProjects, setHasOtherProjects] = useState(false);
   const [isFullScreen, setIsFullScreen] = useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
   const [isClient, setIsClient] = useState(false);
@@ -49,15 +50,33 @@ export function ConstructionProjectDetails({ project, locale }: ConstructionProj
     }));
   }, [project.images, project.id]);
 
-  // Fetch related projects
+  // Fetch related projects and check if other projects exist
   const fetchRelatedProjects = useCallback(async () => {
     try {
       setLoadingRelated(true);
+      
+      // Fetch related projects
       const related = await getRelatedConstructionProjects(project.id, project.category, 3);
       setRelatedProjects(related);
+      
+      // Check if there are any other projects besides the current one
+      // If we have related projects, then there are definitely other projects
+      if (related.length > 0) {
+        setHasOtherProjects(true);
+      } else {
+        // If no related projects in same category, check all projects
+        try {
+          const allProjects = await getConstructionProjects(undefined, 1);
+          // If we get any projects and it's not just the current one
+          setHasOtherProjects(allProjects.length > 0 && !(allProjects.length === 1 && allProjects[0].id === project.id));
+        } catch {
+          setHasOtherProjects(false);
+        }
+      }
     } catch (error) {
       console.error('Error fetching related projects:', error);
       setRelatedProjects([]);
+      setHasOtherProjects(false);
     } finally {
       setLoadingRelated(false);
     }
@@ -273,14 +292,16 @@ export function ConstructionProjectDetails({ project, locale }: ConstructionProj
           </motion.div>
         )}
 
-        {/* Back to Top */}
-        <div className="text-center">
-          <Link href={`/${locale}/construction`}>
-            <Button variant="outline" className="px-8 py-3">
-              {t('viewAllProjects', { defaultValue: 'View All Projects' })}
-            </Button>
-          </Link>
-        </div>
+        {/* View All Projects Button - Only show if there are other projects */}
+        {hasOtherProjects && (
+          <div className="text-center">
+            <Link href={`/${locale}/construction`}>
+              <Button variant="outline" className="px-8 py-3">
+                {t('viewAllProjects', { defaultValue: 'View All Projects' })}
+              </Button>
+            </Link>
+          </div>
+        )}
       </div>
 
       {/* Enhanced Modal using the existing MediaPreviewModal */}

@@ -81,7 +81,6 @@ export const getConstructionProjects = async (
     for (const cat of categories) {
       try {
         const collectionPath = `construction-projects/${cat}/categoryProduct`;
-        console.log(`Fetching from path: ${collectionPath}`);
         
         const q = query(
           collection(firestore, collectionPath),
@@ -103,14 +102,11 @@ export const getConstructionProjects = async (
           }
         });
         
-        console.log(`Found ${snapshot.size} products in category: ${cat}`);
       } catch (categoryError) {
-        console.warn(`Error fetching category ${cat}:`, categoryError);
         continue;
       }
     }
 
-    console.log(`Total construction projects fetched: ${projects.length}`);
     return projects;
   } catch (error) {
     console.error('Error fetching construction projects:', error);

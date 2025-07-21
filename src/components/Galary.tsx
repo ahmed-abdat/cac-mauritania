@@ -73,7 +73,6 @@ const GalleryClient: React.FC<GalleryClientProps> = ({
   const handleExitFullScreen = () => {
     setIsFullScreen(false);
     setSelectedMediaIndex(null);
-    console.log("exit full screen");
   };
 
   // Function to fetch and display more media
@@ -96,11 +95,9 @@ const GalleryClient: React.FC<GalleryClientProps> = ({
 
   useEffect(() => {
     const fetchGalaryMedia = async () => {
-      console.log(presentations[slug], slug);
 
       try {
         const mediaData: MediaItem[] = await getGalaryMedia(slug);
-        console.log(mediaData);
 
         if (!mediaData || mediaData.length === 0) {
           setError("No media found for this gallery");

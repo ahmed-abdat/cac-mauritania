@@ -18,11 +18,11 @@ export async function generateMetadata({
 
   return {
     title: t("PresentationduGroupeCAC"),
-    description: t("ProjetsExemples"),
+    description: t("Description"),
     keywords: aboutKeywords,
     openGraph: {
       title: t("PresentationduGroupeCAC"),
-      description: t("ProjetsExemples"),
+      description: t("Description"),
       url: `${siteConfig.url}/${locale}/about`,
       type: "website",
       images: [
