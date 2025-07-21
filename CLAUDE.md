@@ -62,6 +62,7 @@ npm run lint
 
 - **Commit Message Rule**: Do not mention claude code in the commit message
 - Ensure complete confidentiality and do not reference Claude Code in any commit messages
+- Never add or mention claude code in the commit message
 
 ## Search Guidelines
 

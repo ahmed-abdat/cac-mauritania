@@ -56,7 +56,7 @@ const ContactCTA = () => {
       bgColor: "bg-red-50",
       titleKey: "location.title",
       descriptionKey: "location.description",
-      action: "https://maps.app.goo.gl/EgMSVd6i2fsrZLdT9",
+      action: "https://www.google.com/maps?q=18.1190586090088,-16.0007514953613",
       actionText: t("location.address"),
     },
   ];

@@ -29,7 +29,7 @@ const Footer: React.FC<{ locale: string }> = ({ locale }) => {
           </p>
           <div className="mt-4">
             <Link
-              href="https://maps.app.goo.gl/EgMSVd6i2fsrZLdT9?g_st=aw"
+              href="https://www.google.com/maps?q=18.1190586090088,-16.0007514953613"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 text-white hover:text-gray-100 transition-all duration-200 group"

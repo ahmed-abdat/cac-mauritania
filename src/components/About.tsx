@@ -442,7 +442,7 @@ export default function AboutUs() {
               </h3>
               <p className="text-gray-700 mb-6">{footerT("location")}</p>
               <Link
-                href="https://maps.app.goo.gl/EgMSVd6i2fsrZLdT9?g_st=aw"
+                href="https://www.google.com/maps?q=18.1190586090088,-16.0007514953613"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-xl transition-all duration-200 group border border-primary/20"

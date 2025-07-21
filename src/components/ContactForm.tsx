@@ -120,7 +120,7 @@ export function ContactForm({ translations }: ContactFormProps) {
             {/* Google Maps Button */}
             <div className="mb-6">
               <Link
-                href="https://maps.app.goo.gl/EgMSVd6i2fsrZLdT9?g_st=aw"
+                href="https://www.google.com/maps?q=18.1190586090088,-16.0007514953613"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg transition-all duration-200 group border border-white/20 hover:border-white/40"
