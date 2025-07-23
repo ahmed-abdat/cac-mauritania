@@ -109,7 +109,7 @@ export function ContactForm({ translations }: ContactFormProps) {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4 md:py-0">
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center py-8 px-4 md:px-0">
       <div className="max-w-4xl w-full flex flex-col md:flex-row gap-y-6 md:gap-y-0 md:gap-x-6">
         <div className="md:w-1/2 p-6 bg-gradient-to-b from-blue-500 to-blue-700 rounded-lg text-white">
           <h2 className="text-2xl font-bold mb-4">{translations.getInTouch}</h2>

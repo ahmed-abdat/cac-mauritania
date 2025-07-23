@@ -12,7 +12,7 @@ export default function DockDemo({ className }: { className?: string }) {
       <Dock magnification={60} distance={100} className={`mx-0 ${className}`}>
         <DockIcon className="bg-black/10 dark:bg-white/10 p-3">
           <Link
-            href="https://www.facebook.com/mbi.mbi.277844"
+            href="https://www.facebook.com/profile.php?id=61578039312244"
             aria-label="facebook"
             target="_blank"
             rel="noopener noreferrer"
@@ -22,7 +22,7 @@ export default function DockDemo({ className }: { className?: string }) {
         </DockIcon>
         <DockIcon className="bg-black/10 dark:bg-white/10 p-3">
           <Link
-            href="https://www.instagram.com/wolf.992717"
+            href="https://www.instagram.com/cac20228"
             aria-label="instagram"
             target="_blank"
             rel="noopener noreferrer"
@@ -30,10 +30,9 @@ export default function DockDemo({ className }: { className?: string }) {
             <Icons.Instagram className="size-full" />
           </Link>
         </DockIcon>
-        {/* TikTok - Commented out for now */}
-        {/* <DockIcon className="bg-black/10 dark:bg-white/10 p-3">
+        <DockIcon className="bg-black/10 dark:bg-white/10 p-3">
           <Link
-            href="https://www.tiktok.com/@groupembirim?_t=8o2l6YAaw7i&_r=1"
+            href="https://www.tiktok.com/@cac9297"
             className="w-full h-full"
             aria-label="tiktok"
             target="_blank"
@@ -41,10 +40,10 @@ export default function DockDemo({ className }: { className?: string }) {
           >
             <Icons.Tiktok className="size-full" />
           </Link>
-        </DockIcon> */}
+        </DockIcon>
         <DockIcon className="bg-black/10 dark:bg-white/10 p-3">
           <Link
-            href="https://www.snapchat.com/@mbi-rim"
+            href="https://www.snapchat.com/@caccompany"
             aria-label="snapchat"
             target="_blank"
             rel="noopener noreferrer"
@@ -54,24 +53,15 @@ export default function DockDemo({ className }: { className?: string }) {
         </DockIcon>
         <DockIcon className="bg-black/10 dark:bg-white/10 p-3">
           <Link
-            href="https://www.linkedin.com/in/modern-building-industry-mbi-034b14360"
-            aria-label="linkedin"
+            href="https://www.youtube.com/@contemporaryartisticconstructi"
+            aria-label="youtube"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Icons.LinkedIn className="size-full" />
+            <Icons.YouTube className="size-full" />
           </Link>
         </DockIcon>
-        <DockIcon className="bg-black/10 dark:bg-white/10 p-3">
-          <Link
-            href="https://t.me/+22242022255"
-            aria-label="telegram"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Icons.Telegram className="size-full" />
-          </Link>
-        </DockIcon>
+
         <DockIcon className="bg-black/10 dark:bg-white/10 p-3">
           <Link
             href={`https://wa.me/${CONTACT_INFO.WHATSAPP_NUMBER}`}
@@ -185,6 +175,22 @@ const Icons = {
           height="514.23"
         />
       </g>
+    </svg>
+  ),
+  YouTube: (props: IconProps) => (
+    <svg
+      viewBox="0 0 256 180"
+      width="256"
+      height="180"
+      xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="xMidYMid"
+      {...props}
+    >
+      <path
+        d="M250.346 28.075A32.18 32.18 0 0 0 227.69 5.418C207.824 0 127.87 0 127.87 0S47.912.164 28.046 5.582A32.18 32.18 0 0 0 5.39 28.24c-6.009 35.298-8.34 89.084.165 122.97a32.18 32.18 0 0 0 22.656 22.657c19.866 5.418 99.822 5.418 99.822 5.418s79.955 0 99.82-5.418a32.18 32.18 0 0 0 22.657-22.657c6.338-35.348 8.291-89.1-.164-123.134Z"
+        fill="red"
+      />
+      <path fill="#FFF" d="m102.421 128.06 66.328-38.418-66.328-38.418z" />
     </svg>
   ),
   LinkedIn: (props: IconProps) => (

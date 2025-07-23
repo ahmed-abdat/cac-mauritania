@@ -86,19 +86,19 @@ export function ModernMobileNav({ locale }: ModernMobileNavProps) {
 
   // Helper function to check if a link is active
   const isLinkActive = (href: string) => {
-    const currentPath = pathname.replace(`/${locale}`, '') || '/';
-    const linkPath = href === '/' ? '/' : href;
-    
+    const currentPath = pathname.replace(`/${locale}`, "") || "/";
+    const linkPath = href === "/" ? "/" : href;
+
     // Exact match for home page
-    if (linkPath === '/' && currentPath === '/') {
+    if (linkPath === "/" && currentPath === "/") {
       return true;
     }
-    
+
     // For other pages, check if current path starts with the link path
-    if (linkPath !== '/' && currentPath.startsWith(linkPath)) {
+    if (linkPath !== "/" && currentPath.startsWith(linkPath)) {
       return true;
     }
-    
+
     return false;
   };
 
@@ -125,36 +125,43 @@ export function ModernMobileNav({ locale }: ModernMobileNavProps) {
                   href={item.href}
                   className={cn(
                     "flex items-center justify-between gap-4 rounded-lg p-3 ml-4 leading-none outline-none transition-all duration-200 hover:bg-primary-blue/5 hover:text-primary-blue focus:bg-primary-blue/10 focus:text-primary-blue focus:outline-none active:scale-95",
-                    isActive && "bg-primary-blue/10 text-primary-blue border border-primary-blue/20"
+                    isActive &&
+                      "bg-primary-blue/10 text-primary-blue border border-primary-blue/20"
                   )}
                   onClick={closeSheet}
                 >
                   <div className="flex items-center gap-3">
-                    <div 
+                    <div
                       className={cn(
                         "w-2 h-2 rounded-full transition-colors duration-200",
                         isActive ? "bg-primary-blue" : "bg-primary-blue/60"
-                      )} 
+                      )}
                     />
                     <div className="flex flex-col">
-                      <span className={cn(
-                        "text-sm font-medium transition-colors duration-200",
-                        isActive && "text-primary-blue font-semibold"
-                      )}>
+                      <span
+                        className={cn(
+                          "text-sm font-medium transition-colors duration-200",
+                          isActive && "text-primary-blue font-semibold"
+                        )}
+                      >
                         {t(item.title)}
                       </span>
                     </div>
                   </div>
                   {isRTL ? (
-                    <ArrowLeft className={cn(
-                      "w-4 h-4 transition-colors duration-200",
-                      isActive ? "text-primary-blue" : "text-gray-400"
-                    )} />
+                    <ArrowLeft
+                      className={cn(
+                        "w-4 h-4 transition-colors duration-200",
+                        isActive ? "text-primary-blue" : "text-gray-400"
+                      )}
+                    />
                   ) : (
-                    <ArrowRight className={cn(
-                      "w-4 h-4 transition-colors duration-200", 
-                      isActive ? "text-primary-blue" : "text-gray-400"
-                    )} />
+                    <ArrowRight
+                      className={cn(
+                        "w-4 h-4 transition-colors duration-200",
+                        isActive ? "text-primary-blue" : "text-gray-400"
+                      )}
+                    />
                   )}
                 </Link>
               );
@@ -188,15 +195,13 @@ export function ModernMobileNav({ locale }: ModernMobileNavProps) {
               className="flex items-center gap-3 text-gray-900"
               onClick={closeSheet}
             >
-              <div className="bg-white p-2 rounded-xl shadow-lg">
-                <Image
-                  src="/logo.webp"
-                  alt="CAC Logo"
-                  width={32}
-                  height={32}
-                  className="w-8 h-8 object-contain"
-                />
-              </div>
+              <Image
+                src="/logo.webp"
+                alt="CAC Logo"
+                width={50}
+                height={50}
+                className="w-16 h-16 object-contain"
+              />
               <div className="flex flex-col">
                 <span className="text-base font-bold text-gray-900">CAC</span>
                 <span className="text-xs text-gray-600">
@@ -215,18 +220,23 @@ export function ModernMobileNav({ locale }: ModernMobileNavProps) {
               href="/"
               className={cn(
                 "flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-xl hover:bg-primary-blue/5 hover:text-primary-blue focus:bg-primary-blue/10 focus:text-primary-blue focus:outline-none transition-all duration-200 active:scale-95",
-                isLinkActive('/') && "bg-primary-blue/10 text-primary-blue border border-primary-blue/20 font-semibold"
+                isLinkActive("/") &&
+                  "bg-primary-blue/10 text-primary-blue border border-primary-blue/20 font-semibold"
               )}
               onClick={closeSheet}
             >
-              <Home className={cn(
-                "w-4 h-4 transition-colors duration-200",
-                isLinkActive('/') ? "text-primary-blue" : "text-primary-blue"
-              )} />
-              <span className={cn(
-                "transition-colors duration-200",
-                isLinkActive('/') && "text-primary-blue font-semibold"
-              )}>
+              <Home
+                className={cn(
+                  "w-4 h-4 transition-colors duration-200",
+                  isLinkActive("/") ? "text-primary-blue" : "text-primary-blue"
+                )}
+              />
+              <span
+                className={cn(
+                  "transition-colors duration-200",
+                  isLinkActive("/") && "text-primary-blue font-semibold"
+                )}
+              >
                 {t("Home")}
               </span>
             </Link>
@@ -253,18 +263,25 @@ export function ModernMobileNav({ locale }: ModernMobileNavProps) {
                 href="/about"
                 className={cn(
                   "flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-xl hover:bg-primary-blue/5 hover:text-primary-blue focus:bg-primary-blue/10 focus:text-primary-blue focus:outline-none transition-all duration-200 active:scale-95",
-                  isLinkActive('/about') && "bg-primary-blue/10 text-primary-blue border border-primary-blue/20 font-semibold"
+                  isLinkActive("/about") &&
+                    "bg-primary-blue/10 text-primary-blue border border-primary-blue/20 font-semibold"
                 )}
                 onClick={closeSheet}
               >
-                <Info className={cn(
-                  "w-4 h-4 transition-colors duration-200",
-                  isLinkActive('/about') ? "text-primary-blue" : "text-primary-blue"
-                )} />
-                <span className={cn(
-                  "transition-colors duration-200",
-                  isLinkActive('/about') && "text-primary-blue font-semibold"
-                )}>
+                <Info
+                  className={cn(
+                    "w-4 h-4 transition-colors duration-200",
+                    isLinkActive("/about")
+                      ? "text-primary-blue"
+                      : "text-primary-blue"
+                  )}
+                />
+                <span
+                  className={cn(
+                    "transition-colors duration-200",
+                    isLinkActive("/about") && "text-primary-blue font-semibold"
+                  )}
+                >
                   {t("About")}
                 </span>
               </Link>

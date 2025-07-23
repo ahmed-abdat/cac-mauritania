@@ -30,15 +30,13 @@ export default function Header({
             title="Return to CAC Homepage"
             className="flex items-center gap-3 hover:opacity-90 transition-opacity"
           >
-            <div className="bg-white shadow-lg p-2 rounded-xl">
-              <Image
-                src="/logo.webp"
-                width={40}
-                height={40}
-                alt="CAC Logo"
-                className="w-10 h-10 object-cover rounded-lg"
-              />
-            </div>
+            <Image
+              src="/logo.webp"
+              width={40}
+              height={40}
+              alt="CAC Logo"
+              className="w-10 h-10 object-cover"
+            />
             <div className="hidden sm:flex flex-col">
               <span className="text-lg font-bold text-gray-900">CAC</span>
               <span className="text-xs text-gray-600">
